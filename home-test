@@ -10,14 +10,24 @@
             font-weight: 400;
             background-image:url('https://codehs.com/uploads/a517122babaec6abc4e61aea17733322');
             color: #ffffff;
-            text-align:center;
+            text-align:left;
+            max-width: 500px;
         }
         
         img {
             border-radius:5px;
-            
-        .version-release {
-            font-weight:400;
+        }
+
+        .changes {
+            font-size:10px
+            text-transform:uppercase;
+            opacity:0.67
+        }
+
+        .release-date {
+            font: size 10px;
+            font-weight:600
+            opacity:0.67
         }
     </style>
 </head>
@@ -29,14 +39,30 @@
     </header>
     <p>Hi! I'm Derek. I'm a student, a designer, and an enthusiast for tech, modern cars, and the weather. I'm a fan of the <i>Forza Horizon</i> franchise of open-world driving and racing games, and I like taking nature photos.</p>
     <p>I'm <s>taking</s> finishing a course on coding websites with HTML and CSS, and this page is the result of the skills I've acquired thus far. My favorite assignment from the course has to be.. actually, it's the one you're looking at right now!</p>
+    
+    <div>
+        <p><b>Version 0.2 beta 2</b></p>
+        <p>Released Jun 7, 2026 • 00:51 UTC</p>
+        <p class="changes">Changes</p>
+        <ul>
+            <li>Changed the style of "Changes" sections in releases on this page.</li>
+            <li>Link to GitHub release</li>
+        </ul>
+    </div>
+
+    <p><b>Version 0.2 beta</b></p>
+    <p>Released Jun 6, 2026 • 23:13 UTC</p>
+    <p>Changes</p>
+    <p>Releases are now <a href="https://github.com/derekyt24/web/releases">posted</a> on GitHub.</p>
+    
     <p><b>Version 0.1 beta 2</b></p>
-    <p class= "version-release">Released Jun 5, 2026</p>
+    <p>Released Jun 5, 2026</p>
     <p><b>Changes:</b></p>
     <p>Added a short bio<p>
     <p>Added my most favorite CodeHS assignment</p>
     
     <p><b>Version 0.1 beta</b></p>
-    <p class="version-release">Released Jun 4, 2026</p>
+    <p>Released Jun 4, 2026</p>
     <p><b>Changes:</b></p>
     <p>This is the first version of my homepage. Check back for updates!</p>
 </body>
