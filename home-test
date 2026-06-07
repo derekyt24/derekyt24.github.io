@@ -19,15 +19,14 @@
         }
 
         .changes {
-            font-size:10px
+            font-size:10px;
             text-transform:uppercase;
-            opacity:0.67
         }
 
         .release-date {
-            font: size 10px;
-            font-weight:600
-            opacity:0.67
+            font-size:10px;
+            font-weight:600;
+            opacity:0.67;
         }
     </style>
 </head>
