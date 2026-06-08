@@ -8,7 +8,6 @@
         body {
             font-family: "Inter", sans-serif;
             font-weight: 400;
-            background-image:url('https://codehs.com/uploads/e139a8c5a0e64214527b102d2cb7b395');
             color: #ffffff;
             text-align:left;
             max-width:750px;
@@ -140,4 +139,13 @@
     <p class="changes">Changes</p>
     <p>This is the first version of my homepage. Check back for updates!</p>
     </div>
+<script>const images = [
+'url("https://codehs.com/uploads/512fde076cbf5c54b358463b26a7f198")',
+'url("https://codehs.com/uploads/f33627db5a8f34cb0d95c99488128793")',
+'url("https://codehs.com/uploads/e53163f3da012b6431a9ebe27e88daf6")',
+'url("https://codehs.com/uploads/3242603c80dd09c6d57959616b36cc42")'
+];
+const random = images[Math.floor(Math.random() * images.length)];
+document.body.style.backgroundImage = random;
+</script>
 </body>
