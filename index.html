@@ -69,6 +69,14 @@
     }
 }
 
+        @media (prefers-color-scheme: dark) {
+    .photo-light { display: none; }
+}
+
+@media (prefers-color-scheme: light) {
+    .photo-dark { display: none; }
+}
+
         .nav-links {
             display: flex;
             gap:15px;
@@ -159,7 +167,8 @@
         </div>
     </nav>    
     <p class="welcome-font">Welcome!</p>
-    <img src="https://codehs.com/uploads/f2d4e6e0ec7170e2b5cc83ca748fc751" alt="Profile photo" width="200px" height="200px">
+    <img class="photo-light" src="assets/20260404-pfp-light.heic">
+    <img class="photo-dark" src="assets/20260404-pfp-dark.JPG">
     <p class="heading-body-line-height">Hi! I'm Derek. I'm a student, a designer, and an enthusiast for tech, modern cars, and the weather. I'm a fan of the <i>Forza Horizon</i> franchise of open-world driving and racing games, and I like taking nature photos.</p>
     <p class="heading-body-line-height">I'm <s>taking</s> finishing a course on the basics of coding websites with HTML and CSS, and this page is the result of the skills I've acquired thus far, plus skills I've learned on the spot.
     </header>
