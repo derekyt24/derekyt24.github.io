@@ -8,7 +8,7 @@
     <style>
         body {
             /*background-color: #000000;*/
-            background-image:url('https://derekyt.dev/assets/20260609-webimage-12-crop.png');
+            /*background-image:url('https://derekyt.dev/assets/20260609-webimage-12-crop.png');*/
             background-size:cover;
             font-family:"Inter", sans-serif;
             font-weight:400;
@@ -26,6 +26,18 @@
             }
             nav {
                 font-size:14px;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+        background-image: url('assets/20260610-webimage-light.png');
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+        background-image: url('assets/20260610-webimage-dark.png');
             }
         }
 
