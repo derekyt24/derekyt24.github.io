@@ -157,12 +157,14 @@
 </head>
 </style>
 <body>
-<script>
-    if (sessionStorage.getItem("pin_unlocked") !== "true") {
-        sessionStorage.setItem("pin_redirect", window.location.pathname);
-        window.location.replace("/access-required");
-    }
-</script>
+/*
+    <script>
+        if (sessionStorage.getItem("pin_unlocked") !== "true") {
+            sessionStorage.setItem("pin_redirect", window.location.pathname);
+            window.location.replace("/access-required");
+        }
+    </script>
+*/
     <header>
     <nav>
         <span class="nav-brand">DerekYT</span>
