@@ -1,0 +1,270 @@
+<head>
+    <title>Access required – DerekYT</title>
+    <link rel="icon" type="image/x-icon" href="assets/20260606-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <style>
+        body {
+            background-size: cover;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            nav {
+                font-size: 14px;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-image: url('assets/20260610-webimage-light.png');
+                color: #000000;
+            }
+            a:link, a:visited {
+                color: #000000;
+            }
+            .nav-links a:link,
+            .nav-links a:visited {
+                color: #000000;
+            }
+            .nav-brand {
+                color: #000000;
+            }
+            .pin-input {
+                background: rgba(0, 0, 0, 0.08);
+                color: #000000;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+            .pin-input:focus {
+                border-color: rgba(0, 0, 0, 0.5);
+            }
+            .pin-button {
+                background: rgba(0, 0, 0, 0.85);
+                color: #ffffff;
+            }
+            .pin-button:hover {
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .pin-error {
+                color: #cc0000;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-image: url('assets/20260610-webimage-dark.png');
+                color: #ffffff;
+            }
+            a:link, a:visited {
+                color: #ffffff;
+            }
+            .nav-links a:link,
+            .nav-links a:visited {
+                color: #ffffff;
+            }
+            .nav-brand {
+                color: #ffffff;
+            }
+            .pin-input {
+                background: rgba(255, 255, 255, 0.08);
+                color: #ffffff;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .pin-input:focus {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+            .pin-button {
+                background: rgba(255, 255, 255, 0.85);
+                color: #000000;
+            }
+            .pin-button:hover {
+                background: rgba(255, 255, 255, 0.7);
+            }
+            .pin-error {
+                color: #ff6b6b;
+            }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        .nav-links a:link {
+            opacity: 0.5;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.75;
+        }
+
+        .nav-links a:visited {
+            opacity: 0.5;
+        }
+
+        .nav-brand {
+            color: #ffffff;
+            font-weight: 500;
+            margin-right: 15px;
+        }
+
+        .page-heading {
+            font-size: 56px;
+            font-weight: 600;
+        }
+
+        .heading-body-line-height {
+            line-height: 25px;
+        }
+
+        a:link {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        a:hover {
+            color: #ffffff;
+            opacity: 0.75;
+        }
+
+        a:visited {
+            color: #ffffff;
+            opacity: 0.5;
+        }
+
+        .pin-form {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pin-input {
+            font-family: "Inter", sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.5em;
+            text-align: center;
+            width: 180px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+
+        .pin-button {
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            font-weight: 550;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .pin-error {
+            font-size: 13px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            min-height: 18px;
+        }
+
+        .pin-error.visible {
+            opacity: 1;
+        }
+
+        .disclaimer {
+            font-size: x-small;
+            letter-spacing: 0.25px;
+            line-height: 15px;
+            opacity: 0.67;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="nav-brand">DerekYT</span>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+                <a href="/blog">Blog</a>
+            </div>
+        </nav>
+        <div>
+            <p class="page-heading">Access required</p>
+            <p class="heading-body-line-height">This page is restricted. Enter your access code below.</p>
+        </div>
+    </header>
+
+    <div class="pin-form">
+        <input
+            class="pin-input"
+            type="password"
+            inputmode="numeric"
+            maxlength="6"
+            placeholder="——————"
+            id="pinInput"
+            autocomplete="off"
+        >
+        <p class="pin-error" id="pinError">Incorrect code. Try again.</p>
+        <button class="pin-button" onclick="checkPin()">Continue</button>
+    </div>
+
+    <p class="disclaimer">Note: The development of this page was assisted—not coded—by Claude Sonnet 4.6.</p>
+
+    <script>
+        const CORRECT_PIN = "123456";
+
+        if (sessionStorage.getItem("pin_unlocked") === "true") {
+            window.location.replace("/");
+        }
+
+        function checkPin() {
+            const input = document.getElementById("pinInput").value;
+            const error = document.getElementById("pinError");
+
+            if (input === CORRECT_PIN) {
+                sessionStorage.setItem("pin_unlocked", "true");
+                const dest = sessionStorage.getItem("pin_redirect") || "/";
+                sessionStorage.removeItem("pin_redirect");
+                window.location.replace(dest);
+            } else {
+                error.classList.add("visible");
+                document.getElementById("pinInput").value = "";
+                setTimeout(() => error.classList.remove("visible"), 2500);
+            }
+        }
+
+        document.getElementById("pinInput").addEventListener("keydown", function(e) {
+            if (e.key === "Enter") checkPin();
+        });
+    </script>
+</body>
