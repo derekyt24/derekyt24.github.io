@@ -19,12 +19,6 @@
             margin:0 auto;
             padding-top:30px;
             padding-bottom:30px;
-            <script>
-            if (sessionStorage.getItem("pin_unlocked") !== "true") {
-                sessionStorage.setItem("pin_redirect", window.location.pathname);
-                window.location.replace("/access-required");
-            }
-            </script>
         }
 
         nav {
@@ -163,6 +157,12 @@
 </head>
 </style>
 <body>
+<script>
+    if (sessionStorage.getItem("pin_unlocked") !== "true") {
+        sessionStorage.setItem("pin_redirect", window.location.pathname);
+        window.location.replace("/access-required");
+    }
+</script>
     <header>
     <nav>
         <span class="nav-brand">DerekYT</span>
