@@ -108,7 +108,7 @@
         .welcome-font {
             margin-top:20px;
             margin-bottom:20px;
-            font-size:42px;
+            font-size:36px;
             font-weight:600;
         }
         
@@ -180,10 +180,26 @@
     <br>
     <details>
     <summary class="summary-font">Version 0.4 betas</summary>
+    <div hidden>
+        <div class="version-padding">
+        <h2 class="ver-head-font">Version 0.4 beta 4.1</h2>
+        <p data-utc="2026-06-xxTxx:xxZ">Released June xx, 2026 • xx:xx UTC</p>
+    </div>
+    <a href="https://github.com/derekyt24/derekyt24.github.io/releases/tag/0.4-b4.1" target="_blank">GitHub release</a>
+    </div>
+    <br hidden class="break-height">
+    <div>
+        <div class="version-padding">
+        <h2 class="ver-head-font">Version 0.4 beta 4</h2>
+        <p data-utc="2026-06-14T05:30Z">Released June 14, 2026 • 05:30 UTC</p>
+    </div>
+    <a href="https://github.com/derekyt24/derekyt24.github.io/releases/tag/0.4-b4" target="_blank">GitHub release</a>
+    </div>
+    <br class="break-height">
     <div>
         <div class="version-padding">
         <h2 class="ver-head-font">Version 0.4 beta 3.1</h2>
-        <p>Released June 12, 2026 • 08:11 UTC</p>
+        <p data-utc="2026-06-12T08:11Z">Released June 12, 2026 • 08:11 UTC</p>
     </div>
     <a href="https://github.com/derekyt24/derekyt24.github.io/releases/tag/0.4-b3.1" target="_blank">GitHub release</a>
     </div>
@@ -191,7 +207,7 @@
     <div>
         <div class="version-padding">
         <h2 class="ver-head-font">Version 0.4 beta 3</h2>
-        <p>Released June 12, 2026 • 07:57 UTC</p>
+        <p data-utc="2026-06-12T07:57Z">Released June 12, 2026 • 07:57 UTC</p>
     </div>
     <a href="https://github.com/derekyt24/derekyt24.github.io/releases/tag/0.4-b3" target="_blank">GitHub release</a>
     </div>
@@ -285,5 +301,15 @@
     <!--test above-->
 <div padding-top="25px">
 <p class="disclaimer"><b></b>Note:</b> The development of this page was assisted—not coded—by Claude Sonnet 4.6.
+<script>
+    document.querySelectorAll('[data-utc]').forEach(el => {
+    const date = new Date(el.dataset.utc);
+    el.textContent = "Released " + date.toLocaleString(undefined, {
+        year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit',
+        timeZoneName: 'short'
+    });
+});
+</script>
 </div>
 </body>
