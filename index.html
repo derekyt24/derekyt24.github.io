@@ -159,10 +159,10 @@
         }
 
         .disclaimer {
-            font-size:x-small;
+            font-size:8px;
             letter-spacing:0.25px;
             line-height:15px;
-            opacity:0.67;
+            opacity:0.5;
         }
     </style>
 </head>
@@ -332,8 +332,7 @@
     </div>
     </details>
     <!--test above-->
-<div padding-top="25px">
-<p class="disclaimer"><b></b>Note:</b> The development of this page was assisted—not coded—by Claude Sonnet 4.6.
+<footer class="disclaimer">Note: More advanced features of this page, such as timezome auto-detection or expandable version lists, were coded by Claude Sonnet 4.6.</footer>
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);
@@ -344,5 +343,4 @@
     });
 });
 </script>
-</div>
 </body>
