@@ -25,13 +25,17 @@
             min-height:100vh;
         }
 
+        b {
+            font-weight:550;
+        }
+
         :root {
             font-family: Inter, sans-serif;
             font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
         }
         @supports (font-variation-settings: normal) {
             :root { font-family: InterVariable, sans-serif; }
-}
+        }
 
 
         nav {
@@ -84,12 +88,41 @@
 }
 
         @media (prefers-color-scheme: dark) {
-    .apple-beta-timelines-graphic-dark { display: none; }
-}
+            .apple-beta-timelines-graphic-dark { display: none; }
+        }
 
-@media (prefers-color-scheme: light) {
-    .apple-beta-timelines-graphic-light { display: none; }
-}
+        @media (prefers-color-scheme: light) {
+            .apple-beta-timelines-graphic-light { display: none; }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .beta-version-label { 
+                border:1.5px solid rgba(221, 158, 0, 1);
+                color:rgba(221, 158, 0, 1);
+                
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .beta-version-label { 
+                border:1.5px solid rgba(255, 183, 0, 1);
+                color:rgba(255, 183, 0, 1);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .latest-version-label { 
+                border:1.5px solid rgba(0, 122, 255, 1);
+                color:rgba(0, 122, 255, 1);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .latest-version-label { 
+                border:1.5px solid rgba(0, 122, 255, 1);
+                color:rgba(0, 122, 255, 1);
+            }
+        }
 
         .nav-links {
             display: flex;
@@ -118,7 +151,7 @@
             margin-right:15px;
         }
         
-        .beta-label-style {
+        .beta-banner-style {
             background-color: rgba(255, 237, 118, 0.5);
             margin-top: 20px;
             /*margin-bottom: 20px;*/
@@ -128,9 +161,11 @@
         }
 
         .welcome-font {
+            margin-top:25px;
             margin-bottom:20px;
             font-size:36px;
-            font-weight:600;
+            font-weight:500;
+            letter-spacing:-0.5px;
         }
         
         .heading-body-line-height {
@@ -138,6 +173,9 @@
         }
 
         .ver-head-font {
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
             margin:0px;
             letter-spacing:-0.25px;
             font-weight:500;
@@ -185,8 +223,9 @@
         }
 
         .project-update-frame {
+            max-height:150px;
             display: flex;
-            gap: 25px;
+            gap: 20px;
             align-items: flex-start;
         }
 
@@ -198,9 +237,24 @@
             margin-top:0px;
         }
 
-        .latest-version-glow {
-            color: rgba(255, 255, 255, 1);
-            text-shadow: 0 0 25px rgba(255, 255, 255, 1);
+        .beta-version-label {
+            border-radius:5px;
+            display:inline-flex;
+            padding:5px 6.5px 5px 7.5px;
+            text-transform:uppercase;
+            font-size:10px;
+            letter-spacing:1px;
+            vertical-align:middle;
+        }
+
+        .latest-version-label {
+            border-radius:5px;
+            display:inline-flex;
+            padding:5px 6.5px 5px 7.5px;
+            text-transform:uppercase;
+            font-size:10px;
+            letter-spacing:1px;
+            vertical-align:middle;
         }
 
         footer {
@@ -222,7 +276,7 @@
             <a href="/updates">Updates</a>
         </div>
     </nav>
-    <div class="beta-label-style"><b>Caution:</b> This website is in beta. Some elements may not work properly.</div>
+    <div class="beta-banner-style"><b>Caution:</b> This website is in beta. Some elements may not work properly.</div>
     </header>
     <p class="welcome-font">Updates</p>
     <h2 class="ver-head-font">Releases are changing beginning July 7</h2>
@@ -233,7 +287,7 @@
         <img class="apple-beta-timelines-graphic-light" src="assets/project-graphics/Apple-beta-timelines-graphic-dark-062726.png">
         <img class="apple-beta-timelines-graphic-dark" src="assets/project-graphics/Apple-beta-timelines-graphic-light-062726.png">
         <div>
-            <h1 class="ver-head-font ver-update-margin-bottom latest-version-glow">Version 1.6.3</h1>
+            <h1 class="ver-head-font ver-update-margin-bottom">Version 1.6.3<span class="beta-version-label">beta</span><span class="latest-version-label">latest</span></h1>
             <p class="heading-body-line-height ver-update-margin-top">View changes here.</p>
         </div>
     </div>
