@@ -29,6 +29,23 @@
             font-weight:550;
         }
 
+        h1 {
+            font-weight:550;
+            letter-spacing:-0.5px;
+        }
+
+        h2 {
+            margin-top:5px;
+            margin-bottom:5px;
+            font-weight:550;
+            letter-spacing:-0.5px;
+        }
+
+        h3 {
+            font-weight:550;
+            letter-spacing:-0.5px;
+        }
+
         :root {
             font-family: Inter, sans-serif;
             font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
@@ -86,14 +103,6 @@
         color: #ffffff;
     }
 }
-
-        @media (prefers-color-scheme: dark) {
-            .apple-beta-timelines-graphic-dark { display: none; }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .apple-beta-timelines-graphic-light { display: none; }
-        }
 
         @media (prefers-color-scheme: light) {
             .beta-version-label { 
@@ -154,7 +163,6 @@
         .beta-banner-style {
             background-color: rgba(255, 237, 118, 0.5);
             margin-top: 20px;
-            /*margin-bottom: 20px;*/
             padding: 15px;
             line-height:100%;
             border-radius: 7px;
@@ -169,6 +177,8 @@
         }
         
         .heading-body-line-height {
+            margin-top:5px;
+            margin-bottom:10px;
             line-height:25px;
         }
 
@@ -192,6 +202,8 @@
         }
 
         .update-metadata {
+            margin-top:0;
+            margin-bottom:10px;
             font-size:12px;
             opacity:0.5;
             letter-spacing:0.25px;
@@ -214,6 +226,7 @@
             font-weight:550;
             letter-spacing:0.25px;
         }
+
         .version-padding {
             line-height: 75%;
         }
@@ -237,6 +250,11 @@
             margin-top:0px;
         }
 
+        .vertical-margins {
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+
         .beta-version-label {
             border-radius:5px;
             display:inline-flex;
@@ -249,12 +267,18 @@
 
         .latest-version-label {
             border-radius:5px;
-            display:inline-flex;
+            display:flex;
             padding:5px 6.5px 5px 7.5px;
+            width:fit-content;
             text-transform:uppercase;
             font-size:10px;
             letter-spacing:1px;
-            vertical-align:middle;
+        }
+
+        .version-label-row {
+            display:flex;
+            gap:10px;
+            margin-bottom:5px;
         }
 
         footer {
@@ -279,18 +303,32 @@
     <div class="beta-banner-style"><b>Caution:</b> This website is in beta. Some elements may not work properly.</div>
     </header>
     <p class="welcome-font">Updates</p>
+    <h2 class="ver-head-font">An update on next month's release changes</h2>
+    <p class="heading-body-line-height">Last week, I announced that releases will be moved to this page instead of the <a href="/">Home</a> page. Now, I'd like to provide context on what's happening, and why.</p>
+    <h2 class="">What's happening?</h2>
+    <p class="heading-body-line-height" style="margin-bottom:5px;">Beginning July 7, 2026, releases will be moved here from the <a href="/">Home</a> page. I'll also be documenting past releases of my projects here. Each release will be clearly documented, with a graphic of the project, a heading to show what version it is, and a link to a dedicated page to view what's new in that version. Additionally, if it's the latest release or a beta, a badge will be displayed. You can see an example of this design below.</p>
+    <br>
+    <div class="project-update-frame">
+        <img src="assets/project-graphics/Apple-beta-timelines-graphic-light-062726.png">
+        <div>
+            <h1 class="ver-head-font ver-update-margin-bottom">Version 1.6.3</h1>
+            <div class="version-label-row">
+                <span class="latest-version-label">latest</span>
+                <span class="beta-version-label">beta</span>
+            </div>
+            <p class="vertical-margins">View changes <a href="releases/apple-beta-timelines/163A">here</a>.</p>
+            <p class="update-metadata">Release date and time to be determined</p>
+        </div>
+    </div>
+    <br>
+    <h2 class="ver-head-font">And why?</h2>
+    <p class="heading-body-line-height">I'm making these changes to improve organization and overall design. If this expansion were to stay on the home page, it would probbaly look like a cluttered mess.</p>
+    <p class="update-metadata" data-utc="2026-06-29T08:05Z">June 29, 2026 • 08:05 UTC</p>
+    <hr>
+    <br>
     <h2 class="ver-head-font">Releases are changing beginning July 7</h2>
     <p class="heading-body-line-height">As part of this website's open beta launch, releases will be moved to this page instead of the <a href="/">Home</a> page. Necessary changes will be made in upcoming betas.</p>
     <p class="update-metadata" data-utc="2026-06-23T06:46Z">June 22, 2026 • 06:46 UTC</p>
-    <br>
-    <div class="project-update-frame">
-        <img class="apple-beta-timelines-graphic-light" src="assets/project-graphics/Apple-beta-timelines-graphic-dark-062726.png">
-        <img class="apple-beta-timelines-graphic-dark" src="assets/project-graphics/Apple-beta-timelines-graphic-light-062726.png">
-        <div>
-            <h1 class="ver-head-font ver-update-margin-bottom">Version 1.6.3<span class="latest-version-label">latest</span></h1>
-            <p class="heading-body-line-height ver-update-margin-top">View changes here.</p>
-        </div>
-    </div>
 <footer>Note: More advanced features of this page, such as timezome auto-detection or expandable version lists, were coded by Claude Sonnet 4.6. Basic features, and all text, were manually coded. Yes, I do consider this to be vibe coded.</footer>
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
