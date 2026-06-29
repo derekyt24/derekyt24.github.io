@@ -12,6 +12,7 @@
 <link rel="preload" as="image" href="assets/20260610-webimage-light.png" media="(prefers-color-scheme: light)">
     <style>
         body {
+            background-image:url('https://derekyt.dev/assets/bg-images/Apple-beta-timelines-163A-bg-image.png/');
             background-attachment: fixed;
             background-size:cover;
             font-family:"Inter", sans-serif;
@@ -55,7 +56,6 @@
 
         @media (prefers-color-scheme: light) {
             body {
-                background-image: url('assets/20260626-webimage-light-6.png');
                 color: #000000;
             }    
         
@@ -72,7 +72,6 @@
         }
 @media (prefers-color-scheme: dark) {
     body {
-        background-image: url('assets/20260613-webimage-dark.png');
         background-color: #0c0e11;
         color: #ffffff;
     }
@@ -161,10 +160,12 @@
         }
 
         .welcome-font {
+            max-width:90%;
             margin-top:25px;
-            margin-bottom:20px;
+            margin-bottom:15px;
             font-size:36px;
             font-weight:500;
+            line-height:1.3;
             letter-spacing:-0.5px;
         }
         
@@ -248,6 +249,7 @@
         }
 
         .latest-version-label {
+            max-width:60px;
             border-radius:5px;
             display:inline-flex;
             padding:5px 6.5px 5px 7.5px;
@@ -278,19 +280,11 @@
     </nav>
     <div class="beta-banner-style"><b>Caution:</b> This website is in beta. Some elements may not work properly.</div>
     </header>
-    <p class="welcome-font">Updates</p>
-    <h2 class="ver-head-font">Releases are changing beginning July 7</h2>
-    <p class="heading-body-line-height">As part of this website's open beta launch, releases will be moved to this page instead of the <a href="/">Home</a> page. Necessary changes will be made in upcoming betas.</p>
-    <p class="update-metadata" data-utc="2026-06-23T06:46Z">June 22, 2026 • 06:46 UTC</p>
-    <br>
-    <div class="project-update-frame">
-        <img class="apple-beta-timelines-graphic-light" src="assets/project-graphics/Apple-beta-timelines-graphic-dark-062726.png">
-        <img class="apple-beta-timelines-graphic-dark" src="assets/project-graphics/Apple-beta-timelines-graphic-light-062726.png">
-        <div>
-            <h1 class="ver-head-font ver-update-margin-bottom">Version 1.6.3<span class="latest-version-label">latest</span></h1>
-            <p class="heading-body-line-height ver-update-margin-top">View changes here.</p>
-        </div>
+    <div>
+        <p class="welcome-font">What's new in Apple beta timelines version 1.6.3</p>
+        <p>Added first betas for OS 26.6.</p>
     </div>
+    <br>
 <footer>Note: More advanced features of this page, such as timezome auto-detection or expandable version lists, were coded by Claude Sonnet 4.6. Basic features, and all text, were manually coded. Yes, I do consider this to be vibe coded.</footer>
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
