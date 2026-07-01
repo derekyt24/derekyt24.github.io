@@ -43,11 +43,17 @@
                 font-size:14px;
             }
         }
+
+        background-image {
+            opacity:0.25;
+        }
         
         nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            z-index: 1;
         }
 
         .nav-links {
@@ -123,6 +129,28 @@
             opacity:0.5;
         }
 
+        .scroll-hero {
+            position: relative;
+        }
+
+        .fade-overlay {
+            display: none;
+        }
+
+        .scroll-text {
+            color: #000000;
+        }
+
+        .scroll-effect-ready .scroll-text {
+            color: #000000;
+            opacity: 0;
+            transform: translateY(80px);
+        }
+
+        .scroll-effect-ready .scroll-text a {
+            color: #000000;
+        }
+
         .break-height {
             line-height:100%;
         }
@@ -145,8 +173,9 @@
             <a href="/projects">Projects</a>
             <a href="/updates">Updates</a>
         </div>
-    </nav>    
-    <div>
+    </nav>
+    <section>
+        <div">
         <p class="welcome-font">On AI and vibe coding</p>
         <p class="heading-body-line-height">Hi. I don't usually talk like this publicly, but something's been on my mind a lot lately, and I can't not talk about it.</p>
         <p class="heading-body-line-height">It's vibe coding. If you don't know what that is, let me explain. To put it simply, vibe coding is where you ask AI to code ideas you have. It's your ideas, and AI's execution. And I'll be up front about it. Vibe coding is.. actually awesome. In my case, I use it to code things that I'm not skilled in yet. For example, the frame on <a href="/updates">Updates</a> showing what each version of my projects would look like when planned changes go into effect on July 7, was vibe coded using a combination of Anthropic's Claude Sonnet 4.6, Google's Gemini 3.5 Flash, and OpenAI's GPT-5.5. <i>(Note: I was waiting for my Claude message limit to reset, so I used Gemini&#8212;which sucks, so I switched to GPT-5.5.)</i></p>
@@ -155,6 +184,7 @@
         <p class="heading-body-line-height">And yeah, sure, any use of AI&#8212;good or not&#8212;(supposedly) wastes water, but I could write a whole other essay-long entry on AI's water use. My point is that AI can in fact be beneficial, but only if it's used responsibly. Again, not to generate whole websites, but to assist in the more difficult parts.</p>
         <hr>
         <p class="heading-body-line-height">This wasn't meant to be a perfectly crafted entry, but more of a way to get my thoughts out. I might write more entries like this, and I might not. We'll see.</p>
-    </div>
+        </div>
+    </section>
     </header>
 </body>
