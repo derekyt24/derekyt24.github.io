@@ -1,5 +1,5 @@
 <head>
-    <title>Apple beta timelines version 1.5.12 &#8211; DerekYT</title>
+    <title>Apple beta timelines version 1.5.6 &#8211; DerekYT</title>
     <link rel="icon" type="image/x-icon" href="assets/20260627-sitegraphic-updates.png">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
@@ -12,7 +12,7 @@
 <link rel="preload" as="image" href="assets/20260610-webimage-light.png" media="(prefers-color-scheme: light)">
     <style>
         body {
-            background-image:url('https://derekyt.dev/assets/bg-images/apple-beta-timelines-1512A-bg-image.png');
+            background-image:url('https://derekyt.dev/assets/bg-images/apple-beta-timelines-156A-bg-image.png');
             background-attachment: fixed;
             background-size:cover;
             font-family:"Inter", sans-serif;
@@ -27,7 +27,7 @@
         }
 
         b {
-            font-weight:550;
+            font-weight:500;
         }
 
         :root {
@@ -42,16 +42,6 @@
         nav {
             display: flex;
             justify-content:space-between;
-        }
-        
-        @media (max-width:600px) {
-            body {
-                padding-left:15px;
-                padding-right:15px;
-            }
-            nav {
-                font-size:14px;
-            }
         }
 
         @media (prefers-color-scheme: light) {
@@ -70,56 +60,30 @@
                 color: #ffffff;
             }
         }
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0c0e11;
-        color: #ffffff;
-    }
-    a:link, a:visited {
-        color: #ffffff;
-    }
-    .nav-links a {
-        color: #ffffff;
-    }
-    .nav-brand {
-        color: #ffffff;
-    }
-}
-
+        
         @media (prefers-color-scheme: dark) {
-            .apple-beta-timelines-graphic-dark { display: none; }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .apple-beta-timelines-graphic-light { display: none; }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .beta-version-label { 
-                border:1.5px solid rgba(221, 158, 0, 1);
-                color:rgba(221, 158, 0, 1);
-
+            body {
+                background-color: #0c0e11;
+                color: #ffffff;
+            }
+            a:link, a:visited {
+                color: #ffffff;
+            }
+            .nav-links a {
+                color: #ffffff;
+            }
+            .nav-brand {
+                color: #ffffff;
             }
         }
-
-        @media (prefers-color-scheme: dark) {
-            .beta-version-label { 
-                border:1.5px solid rgba(255, 183, 0, 1);
-                color:rgba(255, 183, 0, 1);
+        
+        @media (max-width:600px) {
+            body {
+                padding-left:15px;
+                padding-right:15px;
             }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .latest-version-label { 
-                border:1.5px solid rgba(0, 122, 255, 1);
-                color:rgba(0, 122, 255, 1);
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .latest-version-label { 
-                border:1.5px solid rgba(0, 122, 255, 1);
-                color:rgba(0, 122, 255, 1);
+            nav {
+                font-size:14px;
             }
         }
 
@@ -169,19 +133,6 @@
             line-height:1.3;
             letter-spacing:-0.5px;
         }
-        
-        .heading-body-line-height {
-            line-height:25px;
-        }
-
-        .ver-head-font {
-            display:inline-flex;
-            align-items:center;
-            gap:10px;
-            margin:0px;
-            letter-spacing:-0.25px;
-            font-weight:500;
-        }
 
         img {
             border-radius: 7px;
@@ -213,53 +164,12 @@
             opacity:0.5;
         }
 
-        .summary-font {
-            font-size:28px;
-            font-weight:550;
-            letter-spacing:0.25px;
-        }
-        .version-padding {
-            line-height: 75%;
+        .heading-body-line-height {
+            line-height:1.5;
         }
 
-        .break-height {
-            line-height:100%;
-        }
-
-        .project-update-frame {
-            max-height:150px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .ver-update-margin-bottom {
-            margin-bottom:10px;
-        }
-
-        .ver-update-margin-top {
-            margin-top:0px;
-        }
-
-        .beta-version-label {
-            border-radius:5px;
-            display:inline-flex;
-            padding:5px 6.5px 5px 7.5px;
-            text-transform:uppercase;
-            font-size:10px;
-            letter-spacing:1px;
-            vertical-align:middle;
-        }
-
-        .latest-version-label {
-            max-width:60px;
-            border-radius:5px;
-            display:inline-flex;
-            padding:5px 6.5px 5px 7.5px;
-            text-transform:uppercase;
-            font-size:10px;
-            letter-spacing:1px;
-            vertical-align:middle;
+        .special-timeline-height {
+            line-height:1;
         }
 
         footer {
@@ -284,14 +194,10 @@
     <div class="beta-banner-style">Caution: This website is in beta. Some elements may not work properly.</div>
     </header>
     <div>
-        <p class="welcome-font">What's new in Apple beta timelines version 1.5.12</p>
-        <p>Added final builds for OS 26.5.</p>
-        <p>Added iOS and iPadOS 15.8.8.</p>
-        <p>Added iOS and iPadOS 16.7.16.</p>
-        <p>Added iOS and iPadOS 18.7.8.</p>
-        <p>Added iOS and iPadOS 18.7.9.</p>
-        <p class="update-metadata" data-utc="2026-05-12T04:55Z">May 12, 2026 • 04:55 UTC</p>
-        <p class="update-metadata">Build number: 1512A</p>
+        <p class="welcome-font">What's new in Apple beta timelines version 1.5.6</p>
+        <p class="heading-body-line-height">In honor of Apple's 50th anniversary, all OS 26 timelines now feature headings with Apple's rainbow gradient and each platform's respective dark wallpaper as special edition timelines. Available through April 8.</p>
+        <p class="update-metadata" data-utc="2026-04-02T05:48Z">April 2, 2026 • 05:48 UTC</p>
+        <p class="update-metadata">Build number: 156A</p>
     </div>
     <br>
 <footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
