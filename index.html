@@ -1,5 +1,5 @@
 <head>
-    <title>Home – DerekYT</title>
+    <title>Home &#8211; DerekYT</title>
     <link rel="icon" type="image/x-icon" href="assets/20260627-sitegraphic-updates.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
 <link rel="preload" as="image" href="assets/20260610-webimage-light.png" media="(prefers-color-scheme: light)">
     <style>
         body {
-            background-attachment: fixed;
+            /*background-attachment: fixed;*/
             background-size:cover;
             font-family:"Inter", sans-serif;
             text-align:left;
@@ -29,22 +29,18 @@
             justify-content:space-between;
         }
         
-        @media (max-width:600px) {
+        @media (max-width:600px) and (prefers-color-scheme: light) {
             body {
+                background-image:url('assets/bg-images/home-background-mobile-light.png');
+                background-color:#ffffff;
                 padding-left:15px;
                 padding-right:15px;
+                color: #000000;
             }
             nav {
                 font-size:14px;
             }
-        }
 
-        @media (prefers-color-scheme: light) {
-            body {
-                background-image: url('assets/20260626-webimage-light-6.png');
-                color: #000000;
-            }    
-        
             a:link, a:visited {
                 color: #000000;
             }
@@ -52,54 +48,127 @@
             .nav-links a {
                 color: #000000;
             }
+
             .nav-brand {
                 color: #000000;
             }
+
+            hr {
+                background-color: rgba(0, 0, 0, 1);
+            }
         }
-@media (prefers-color-scheme: dark) {
-    body {
-        background-image: url('assets/20260613-webimage-dark.png');
-        background-color: #0c0e11;
-        color: #ffffff;
-    }
-    a:link, a:visited {
-        color: #ffffff;
-    }
-    .nav-links a {
-        color: #ffffff;
-    }
-    .nav-brand {
-        color: #ffffff;
-    }
-}
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-image:url('assets/bg-images/home-background-mobile-light.png');
+                background-color:#ffffff;
+                color: #000000;
+            }
+
+            a:link, a:visited {
+                color: #000000;
+            }
+
+            .nav-links a {
+                color: #000000;
+            }
+
+            .nav-brand {
+                color: #000000;
+            }
+
+            hr {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        @media (max-width:600px) and (prefers-color-scheme: dark) {
+            body {
+                background-image:url('assets/bg-images/home-background-mobile-dark.png');
+                background-color:#0a1015;
+                padding-left:15px;
+                padding-right:15px;
+                color: #ffffff;
+            }
+            nav {
+                font-size:14px;
+            }
+
+            a:link, a:visited {
+                color: #ffffff;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+            }
+
+            .nav-brand {
+                color: #ffffff;
+            }
+
+            hr {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
 
         @media (prefers-color-scheme: dark) {
-    .photo-light { display: none; }
-}
+            body {
+                background-image:url('assets/bg-images/home-background-mobile-dark.png');
+                background-color:#0a1015;
+                color: #ffffff;
+            }
+            nav {
+                font-size:14px;
+            }
 
-@media (prefers-color-scheme: light) {
-    .photo-dark { display: none; }
-}
+            a:link, a:visited {
+                color: #ffffff;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+            }
+
+            .nav-brand {
+                color: #ffffff;
+            }
+
+            hr {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .photo-light { display: none; }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .photo-dark { display: none; }
+        }
 
         .nav-links {
             display: flex;
-            gap:15px;
+            gap:10px;
         }
 
         .nav-links a {
+            color:inherit;
             opacity:0.5;
             text-decoration:none;
         }
 
         .nav-links a:link {
+            color:inherit;
             opacity:0.5;
         }
 
         .nav-links a:hover {
+            color:inherit;
             opacity:0.75;
         }
 
         .nav-links a:visited {
+            color:inherit;
             opacity:0.5;
         }
         
@@ -149,18 +218,24 @@
         }
 
         hr {
+            border:0;
+            border-radius:25px;
+            height:2px;
             width:100%;
         }
 
         a:link {
+            color:inherit;
             opacity:0.83;
         }
 
         a:hover {
+            color:inherit;
             opacity:0.67;
         }
 
         a:visited {
+            color:inherit;
             opacity:0.5;
         }
 
@@ -181,7 +256,8 @@
             font-size:10px;
             letter-spacing:0.25px;
             opacity:0.5;
-            margin-top: auto;
+            margin-top:50px;
+            margin-bottom:0px;
         }
     </style>
 </head>
@@ -197,8 +273,8 @@
         </div>
     </nav>
     <div>
-        <p class="beta-label-style">Caution: This website is in beta. Some elements may not work properly.</p>
-        <div class="note-style">Important update: Beginning July 7, releases will be changing. Learn more <a href="/updates">here</a>.</div>
+        <p class="beta-label-style">This website is in beta. Some elements may not work properly.</p>
+        <div class="note-style">Releases are changing on July 7. Learn more <a href="/updates">here</a>.</div>
     </div>
     <p class="welcome-font">Welcome!</p>
     <img class="photo-light" src="assets/20260404-profilepic-light.JPG" width="225px" height="225px">
@@ -226,7 +302,7 @@
         </div>
     <a href="https://github.com/derekyt24/derekyt24.github.io/releases/tag/0.5-b3" target="_blank">GitHub release</a>
     </div>
-    <br hidden class="break-height">
+    <br class="break-height">
     <div>
         <div class="version-padding">
         <h2 class="ver-head-font">Version 0.5 beta 2</h2>

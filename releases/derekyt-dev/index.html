@@ -1,5 +1,5 @@
 <head>
-    <title>Updates – DerekYT</title>
+    <title>Site releases &#8211; DerekYT</title>
     <link rel="icon" type="image/x-icon" href="assets/20260627-sitegraphic-updates.png">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
@@ -12,6 +12,7 @@
 <link rel="preload" as="image" href="assets/20260610-webimage-light.png" media="(prefers-color-scheme: light)">
     <style>
         body {
+            background-image:url('https://derekyt.dev/assets/bg-images/releases-derekyt-dev-background.png');
             background-attachment: fixed;
             background-size:cover;
             font-family:"Inter", sans-serif;
@@ -25,35 +26,23 @@
             min-height:100vh;
         }
 
+        p {
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+
         b {
             font-weight:550;
         }
 
-        h1 {
-            font-weight:550;
-            letter-spacing:-0.5px;
-        }
-
-        h2 {
-            margin-top:5px;
-            margin-bottom:5px;
-            font-weight:550;
-            letter-spacing:-0.5px;
-        }
-
-        h3 {
-            font-weight:550;
-            letter-spacing:-0.5px;
-        }
-
         :root {
             font-family: Inter, sans-serif;
-            font-feature-settings: 'liga' 1, 'calt' 1;
+            font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
         }
-
         @supports (font-variation-settings: normal) {
             :root { font-family: InterVariable, sans-serif; }
         }
+
 
         nav {
             display: flex;
@@ -72,24 +61,22 @@
 
         @media (prefers-color-scheme: light) {
             body {
-                background-image: url('assets/20260626-webimage-light-6.png');
-                color: #000000;
+                color: #ffffff;
             }    
         
             a:link, a:visited {
-                color: #000000;
+                color: #ffffff;
             }
 
             .nav-links a {
-                color: #000000;
+                color: #ffffff;
             }
             .nav-brand {
-                color: #000000;
+                color: #ffffff;
             }
         }
 @media (prefers-color-scheme: dark) {
     body {
-        background-image: url('assets/20260613-webimage-dark.png');
         background-color: #0c0e11;
         color: #ffffff;
     }
@@ -103,6 +90,14 @@
         color: #ffffff;
     }
 }
+
+        @media (prefers-color-scheme: dark) {
+            .apple-beta-timelines-graphic-dark { display: none; }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .apple-beta-timelines-graphic-light { display: none; }
+        }
 
         @media (prefers-color-scheme: light) {
             .beta-version-label { 
@@ -159,34 +154,46 @@
             font-weight:500;
             margin-right:15px;
         }
+
+        a.link-underline {
+            text-decoration:none;
+        }
         
         .beta-banner-style {
             background-color: rgba(255, 237, 118, 0.5);
             margin-top: 20px;
-            padding: 15px;
-            line-height:100%;
+            /*margin-bottom: 20px;*/
+            padding:14px;
+            font-size:16px;
+            line-height:1.4;
             border-radius: 7px;
         }
 
         .welcome-font {
             margin-top:25px;
-            margin-bottom:20px;
+            margin-bottom:15px;
             font-size:36px;
             font-weight:500;
+            line-height:1.3;
             letter-spacing:-0.5px;
         }
         
         .heading-body-line-height {
-            margin-top:5px;
-            margin-bottom:10px;
             line-height:25px;
         }
 
         .ver-head-font {
-            display:inline-flex;
-            align-items:center;
+            font-size:24px;
             gap:10px;
             margin:0px;
+            letter-spacing:-0.25px;
+            font-weight:500;
+        }
+
+        .ver-head-font-margin-top {
+            font-size:24px;
+            gap:10px;
+            margin-top:20px;
             letter-spacing:-0.25px;
             font-weight:500;
         }
@@ -198,14 +205,12 @@
         }
 
         hr {
-            margin-top:20px;
-            margin-bottom:20px;
             width:100%;
         }
 
         .update-metadata {
-            margin-top:0;
-            margin-bottom:10px;
+            margin-top:5px;
+            margin-bottom:5px;
             font-size:12px;
             opacity:0.5;
             letter-spacing:0.25px;
@@ -228,7 +233,6 @@
             font-weight:550;
             letter-spacing:0.25px;
         }
-
         .version-padding {
             line-height: 75%;
         }
@@ -237,61 +241,15 @@
             line-height:100%;
         }
 
-        .project-update-frame {
-            max-height:150px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .ver-update-margin-bottom {
-            margin-bottom:10px;
-        }
-
-        .ver-update-margin-top {
-            margin-top:0px;
-        }
-
-        .vertical-margins {
-            margin-top:10px;
-            margin-bottom:10px;
-        }
-
-        .beta-version-label {
-            border-radius:5px;
-            display:inline-flex;
-            padding:5px 6.5px 5px 7.5px;
-            text-transform:uppercase;
-            font-size:10px;
-            letter-spacing:1px;
-            vertical-align:middle;
-        }
-
-        .latest-version-label {
-            border-radius:5px;
-            display:flex;
-            padding:5px 6.5px 5px 7.5px;
-            width:fit-content;
-            text-transform:uppercase;
-            font-size:10px;
-            letter-spacing:1px;
-        }
-
-        .version-label-row {
-            display:flex;
-            gap:10px;
-            margin-bottom:5px;
-        }
-
-        a.link-underline {
-            text-decoration:none;
+        .coming-soon {
+            opacity:0.5;
         }
 
         footer {
             font-size:10px;
             letter-spacing:0.25px;
             opacity:0.5;
-            margin-top: auto;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -306,43 +264,36 @@
             <a href="/updates">Updates</a>
         </div>
     </nav>
-    <div class="beta-banner-style"><b>Caution:</b> This website is in beta. Some elements may not work properly.</div>
+    <div class="beta-banner-style">This website is in beta. Some elements may not work properly.</div>
     </header>
-    <p class="welcome-font">Updates</p>
     <div>
-        <h2 class="ver-head-font">What you need to know about Tuesday's changes to releases</h2>
-        <p class="heading-body-line-height" style="margin-bottom:5px;">On Tuesday, July 7, releases will be moved to a dedicated page to improve organization.</p>
-        <p class="link-underline"><a href="/updates/july-7-release-changes">Learn more &#8250;</a></p>
-        <hr>
+        <p class="welcome-font">Site releases</p>
+        <p class="ver-head-font">Version 0.5 betas</p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-05C01" target="_blank">Version 0.5 beta 3 (05C01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-05B01" target="_blank">Version 0.5 beta 2 (05B01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-05A01" target="_blank">Version 0.5 beta 1 (05A01) &#8250;</a></p>
+        
+        <p class="ver-head-font-margin-top">Version 0.4 betas</p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04F01" target="_blank">Version 0.4 beta 6 (04F01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04E01" target="_blank">Version 0.4 beta 5 (04E01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04D01" target="_blank">Version 0.4 beta 4 (04D01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04C02" target="_blank">Version 0.4 beta 3.1 (04C02) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04C01" target="_blank">Version 0.4 beta 3 (04C01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04B01" target="_blank">Version 0.4 beta 2 (04B01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-04A01" target="_blank">Version 0.4 beta 1 (04A01) &#8250;</a></p>
+
+        <p class="ver-head-font-margin-top">Version 0.3 betas</p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-03B02" target="_blank">Version 0.3 beta 2.1 (03B02) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-03B01" target="_blank">Version 0.3 beta 2 (03B01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-03A01" target="_blank">Version 0.3 beta 1 (03A01) &#8250;</a></p>
+
+        <p class="ver-head-font-margin-top">Version 0.2 betas</p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-02C01" target="_blank">Version 0.2 beta 3 (02C01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-02B02" target="_blank">Version 0.2 beta 2.1 (02B02) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-02B01" target="_blank">Version 0.2 beta 2 (02B01) &#8250;</a></p>
+        <p><a class="link-underline" href="/releases/derekyt-dev/dev-02A01" target="_blank">Version 0.2 beta 1 (02A01) &#8250;</a></p>
     </div>
-    <div style="opacity:0.25;">
-        <h2 class="ver-head-font"><s>An update on next month's release changes</s></h2>
-        <p class="heading-body-line-height"><s>Last week, I announced that releases will be moved to this page instead of the <a href="/">Home</a> page. Now, I'd like to provide context on what's happening, and why.</s></p>
-        <h2 class="ver-head-font"><s>What's happening?</s></h2>
-        <p class="heading-body-line-height" style="margin-bottom:5px;"><s>Beginning July 7, 2026, releases will be moved here from the <a href="/">Home</a> page. I'll also be documenting past releases of my projects here. Each release will be clearly documented, with a graphic of the project, a heading to show what version it is, and a link to a dedicated page to view what's new in that version. Additionally, if it's the latest release or a beta, a badge will be displayed. You can see an example of this design below.</s></p>
-        <br>
-        <div class="project-update-frame">
-            <img src="assets/project-graphics/Apple-beta-timelines-graphic-light-062726-500w.png">
-            <div>
-                <h1 class="ver-head-font ver-update-margin-bottom"><s>Version 1.6.3</s></h1>
-                <div class="version-label-row">
-                    <span class="latest-version-label"><s>latest</s></span>
-                    <span class="beta-version-label"><s></s>beta</s></span>
-                </div>
-                <p class="vertical-margins"><s>View changes <a href="releases/apple-beta-timelines/163A">here</a>.</s></p>
-                <p class="update-metadata"><s></s>Release date and time to be determined</s></p>
-            </div>
-        </div>
-        <br>
-        <h2 class="ver-head-font"><s>And why?</s></h2>
-        <p class="heading-body-line-height"><s>I'm making these changes to improve organization and overall design. If this expansion were to stay on the home page, it would probbaly look like a cluttered mess.</s></p>
-        <p class="update-metadata" data-utc="2026-06-29T08:05Z">June 29, 2026 • 08:05 UTC</p>
-        <hr>
-        <br>
-        <h2 class="ver-head-font"><s>Releases are changing beginning July 7</s></h2>
-        <p class="heading-body-line-height"><s>As part of this website's open beta launch, releases will be moved to this page instead of the <a href="/">Home</a> page. Necessary changes will be made in upcoming betas.</s></p>
-        <p class="update-metadata" data-utc="2026-06-23T06:46Z"><s>June 22, 2026 • 06:46 UTC</s></p>
-    </div>
+    <br>
 <footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
