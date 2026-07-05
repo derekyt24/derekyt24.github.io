@@ -1,5 +1,5 @@
 <head>
-    <title>Apple beta timelines version 1.6.3 (163A) – DerekYT</title>
+    <title>Releases &#8211; DerekYT</title>
     <link rel="icon" type="image/x-icon" href="assets/20260627-sitegraphic-updates.png">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
@@ -51,19 +51,16 @@
         
         @media (max-width:600px) {
             body {
+                background-image:url('assets/bg-images/releases-background-mobile.png');
+                background-color:#0c1015;
                 padding-left:15px;
                 padding-right:15px;
+                color: #ffffff;
             }
             nav {
                 font-size:14px;
             }
-        }
 
-        @media (prefers-color-scheme: light) {
-            body {
-                color: #ffffff;
-            }    
-        
             a:link, a:visited {
                 color: #ffffff;
             }
@@ -71,60 +68,42 @@
             .nav-links a {
                 color: #ffffff;
             }
+
             .nav-brand {
                 color: #ffffff;
             }
-        }
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0c0e11;
-        color: #ffffff;
-    }
-    a:link, a:visited {
-        color: #ffffff;
-    }
-    .nav-links a {
-        color: #ffffff;
-    }
-    .nav-brand {
-        color: #ffffff;
-    }
-}
 
-        @media (prefers-color-scheme: dark) {
-            .apple-beta-timelines-graphic-dark { display: none; }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .apple-beta-timelines-graphic-light { display: none; }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .beta-version-label { 
-                border:1.5px solid rgba(221, 158, 0, 1);
-                color:rgba(221, 158, 0, 1);
-
+            hr {
+                background-color: rgba(255, 255, 255, 1);
             }
         }
 
-        @media (prefers-color-scheme: dark) {
-            .beta-version-label { 
-                border:1.5px solid rgba(255, 183, 0, 1);
-                color:rgba(255, 183, 0, 1);
+        @media (min-width:601px) {
+            body {
+                background-image:url('assets/bg-images/releases-background-desktop.png');
+                background-color:#0a1015;
+                padding-left:15px;
+                padding-right:15px;
+                color: #ffffff;
             }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .latest-version-label { 
-                border:1.5px solid rgba(0, 122, 255, 1);
-                color:rgba(0, 122, 255, 1);
+            nav {
+                font-size:14px;
             }
-        }
 
-        @media (prefers-color-scheme: dark) {
-            .latest-version-label { 
-                border:1.5px solid rgba(0, 122, 255, 1);
-                color:rgba(0, 122, 255, 1);
+            a:link, a:visited {
+                color: #ffffff;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+            }
+
+            .nav-brand {
+                color: #ffffff;
+            }
+
+            hr {
+                background-color: rgba(255, 255, 255, 1);
             }
         }
 

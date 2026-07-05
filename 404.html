@@ -24,13 +24,115 @@
             padding-bottom:30px;
         }
 
-        @media (max-width:600px) {
+        @media (max-width:600px) and (prefers-color-scheme: light) {
             body {
+                background-image:url('assets/bg-images/404-background-mobile-dark.png');
+                background-color:#ffffff;
                 padding-left:15px;
                 padding-right:15px;
+                color: #ffffff;
             }
             nav {
                 font-size:14px;
+            }
+
+            a:link, a:visited {
+                color: #000000;
+            }
+
+            .nav-links a {
+                color: #000000;
+            }
+
+            .nav-brand {
+                color: #000000;
+            }
+
+            hr {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-image:url('assets/bg-images/404-background-desktop-dark.png');
+                background-color:#ffffff;
+                color: #ffffff;
+            }
+            nav {
+                font-size:14px;
+            }
+
+            a:link, a:visited {
+                color: #000000;
+            }
+
+            .nav-links a {
+                color: #000000;
+            }
+
+            .nav-brand {
+                color: #000000;
+            }
+
+            hr {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        @media (max-width:600px) and (prefers-color-scheme: dark) {
+            body {
+                background-image:url('assets/bg-images/404-background-mobile-dark.png');
+                background-color:#0a1015;
+                padding-left:15px;
+                padding-right:15px;
+                color: #ffffff;
+            }
+            nav {
+                font-size:14px;
+            }
+
+            a:link, a:visited {
+                color: #ffffff;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+            }
+
+            .nav-brand {
+                color: #ffffff;
+            }
+
+            hr {
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-image:url('assets/bg-images/404-background-desktop-dark.png');
+                background-color:#0a1015;
+                color: #ffffff;
+            }
+            nav {
+                font-size:14px;
+            }
+
+            a:link, a:visited {
+                color: #ffffff;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+            }
+
+            .nav-brand {
+                color: #ffffff;
+            }
+
+            hr {
+                background-color: rgba(255, 255, 255, 1);
             }
         }
         
