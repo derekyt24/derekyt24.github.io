@@ -1,9 +1,10 @@
 <head>
     <title>Home &#8211; DerekYT</title>
     <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Font information (start) -->
+     <link rel="preconnect" href="https://rsms.me/">
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Font information (end) -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -17,7 +18,7 @@
             text-align:left;
             max-width:750px;
             margin:0 auto;
-            padding: 25px 20px 25px 20px;
+            padding: 25px 20px 10px 20px;
             display:flex;
             flex-direction:column;
             min-height:100vh;
@@ -26,6 +27,7 @@
         nav {
             display: flex;
             justify-content:space-between;
+            font-size: 14px;
         }
         
         @media (max-width:600px) and (prefers-color-scheme: light) {
@@ -34,7 +36,7 @@
             }
         }
 
-        @media (prefers-color-scheme: light) {
+        @media (min-width: 601px) and (prefers-color-scheme: light) {
             body {
                 background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-desktop-light.png');
             }
@@ -46,7 +48,7 @@
             }
         }
 
-        @media (prefers-color-scheme: dark) {
+        @media (min-width: 601px) and (prefers-color-scheme: dark) {
             body {
                 background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-desktop-dark.png');
             }
@@ -97,16 +99,6 @@
         a:visited {
             color: #ffffff;
         }
-        
-        .beta-label-style {
-            background-color: rgba(255, 237, 118, 0.5);
-            margin-top: 20px;
-            padding:14px;
-            font-size:15px;
-            line-height:1.4;
-            letter-spacing:0em;
-            border-radius: 7px;
-        }
 
         .note-style {
             margin-top: 10px;
@@ -139,42 +131,69 @@
         }
 
         .welcome-font {
-            margin-top:25px;
+            margin-top:20px;
             margin-bottom:20px;
             font-size:36px;
-            font-weight:550;
-            letter-spacing:0.015em;
+            font-weight:500;
+            letter-spacing:-0.02em;
         }
         
-        .heading-body-line-height {
+        .body-height {
             line-height:1.5;
             margin-top:15px;
             margin-bottom:12px;
-        }
-
-        .ver-head-font {
-            letter-spacing:0.02em;
-            font-weight:500;
-            margin-top:5px;
-            font-size:21px;
-            
-        }
-
-        .ver-primary-head-font {
-            letter-spacing:0.02em;
-            font-weight:500;
-            font-size:21px;
         }
 
         img {
             border-radius: 7px;
         }
 
-        hr {
-            border:0;
-            border-radius:25px;
-            height:1.5px;
-            width:100%;
+        h2.featured {
+            font-weight:500;
+            font-size:28px;
+            margin:17.5px 0px 17.5px 0px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            .graphic-light {
+                display: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .graphic-dark {
+                display: none;
+            }
+        }
+
+        .project-frame {
+            display: flex;
+            max-height:200px;
+            max-width:75%;
+            gap: 17.5px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 600px) {
+            .project-frame {
+            max-width:100%;
+            }
+        }
+
+        .featured-project-head {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            letter-spacing:-0.02em;
+            font-size:24px;
+            font-weight:500;
+        }
+
+        .featured-project-description {
+            line-height:1.5;
+            margin-top:10px;
+            margin-bottom:10px;
         }
 
         a:link {
@@ -196,39 +215,9 @@
             text-decoration:none;
         }
 
-        .summary-font {
-            font-size:24px;
-            font-weight:450;
-            letter-spacing:0.02em;
-        }
-
-        .version-padding {
-            line-height: 0.7;
-        }
-
-        .mini-bottom-margin {
-            margin-bottom:5px;
-        }
-
-        .ver-text {
-            font-size:14px;
-        }
-
-        .break-height {
-            line-height:90%;
-        }
-
-        .version-break-height {
-            line-height:110%;
-        }
-
-        .bullet {
-            font-weight:100;
-        }
-
         footer {
             font-size:10px;
-            letter-spacing:0.25px;
+            letter-spacing:0.03em;
             opacity:0.5;
             margin-top:auto;
             padding-top:50px;
@@ -246,25 +235,25 @@
             <a href="/updates">Updates</a>
         </div>
     </nav>
-    <div>
-        <p class="beta-label-style">This website is in beta. Some elements may not work properly.</p>
-    </div>
     <p class="welcome-font">Welcome!</p>
     <img class="photo-light" src="assets/20260404-profilepic-light.JPG" width="225px" height="225px">
     <img class="photo-dark" src="assets/20260404-profilepic-dark.JPG" width="225px" height="225px">
-    <p class="heading-body-line-height">Hi! I'm Derek. Student, designer, and enthusiast for tech, modern cars, and weather.</p>
-    <p class="heading-body-line-height">I make the Apple beta timelines, Android beta timelines, and compatibility charts projects. You can find links to those on the <a href="/projects">Projects</a> page.</p>
+    <p class="body-height">Hi! I'm Derek. Student, designer, and enthusiast for tech, modern cars, and weather.</p>
+    <p class="body-height">I make the Apple beta timelines, Android beta timelines, and compatibility charts projects. You can find links to those on the <a href="/projects">Projects</a> page.</p>
+    <h2 class="featured">Featured project</h2>
+    <div class="project-frame">
+        <img class="graphic-light" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/light.png" width="150px" height="150px">
+        <img class="graphic-dark" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/dark.png" width="150px" height="150px">
+        <div>
+            <p class="featured-project-head">Apple beta timelines</p>
+            <p class="featured-project-description">An extensive library of release dates for builds of Apple platforms.</p>
+            <p class="featured-project-description"><a href="https://drive.google.com/drive/folders/1Vw2k4fz856dKxGk3J6SnUQwa-9xgCM7D?usp=sharing">Explore</a> <span style="font-weight:700;">&middot;</span> <a href="https://derekyt.dev/releases/apple-beta-timelines">Release notes</a> <span style="font-weight:700;">&middot;</span> <a href="https://beta.derekyt.dev/projects/apple-beta-timelines">Try version 2.0 (beta)</a></p>
+        </div>
+    </div>
     </a>
     </header>
-<footer>AI models from Anthropic and OpenAI assisted in developing features on this site.</footer>
-<script>
-    document.querySelectorAll('[data-utc]').forEach(el => {
-    const date = new Date(el.dataset.utc);
-    el.textContent = "" + date.toLocaleString(undefined, {
-        year: 'numeric', month: 'short', day: 'numeric',
-        hour: '2-digit', minute: '2-digit',
-        timeZoneName: 'short'
-    });
-});
-</script>
+<footer>
+    <p>Try experimental features at <a href="https://beta.derekyt.dev/">beta.derekyt.dev</a></p>
+    <p>AI models from Anthropic and OpenAI assisted in developing features on this site.</p>
+</footer>
 </body>
