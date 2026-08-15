@@ -56,10 +56,12 @@
         
         @media (prefers-color-scheme: dark) {
             .photo-light { display: none; }
+            .graphic-light { display: none; }
         }
 
         @media (prefers-color-scheme: light) {
             .photo-dark { display: none; }
+            .graphic-dark { display: none; }
         }
 
         .nav-links {
@@ -101,7 +103,8 @@
         }
 
         .note-style {
-            margin-top: 10px;
+            background-color: rgba(118, 198, 255, 0.5);
+            margin-top: 20px;
             padding:14px;
             font-size:15px;
             line-height:1.4;
@@ -109,25 +112,8 @@
             border-radius: 7px;
         }
 
-        .note-style {
-            position: relative;
-            isolation: isolate;
-        }
-
-        .note-style::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            border-radius: inherit;
-            background: linear-gradient(
-                108deg,
-                rgb(19, 95, 127),
-                rgb(65, 94, 2),
-                rgb(147, 94, 17)
-            );
-            filter: blur(10px);
-            opacity: 1;
+        .note-text {
+            margin:0;
         }
 
         .welcome-font {
@@ -154,29 +140,28 @@
             margin:17.5px 0px 17.5px 0px;
         }
 
-        @media (prefers-color-scheme: light) {
-            .graphic-light {
-                display: none;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .graphic-dark {
-                display: none;
-            }
+        .graphic-light,
+        .graphic-dark {
+            width:100px;
+            height:100px;
+            border-radius: 5px;
+            object-fit:cover;
         }
 
         .project-frame {
             display: flex;
             max-height:200px;
-            max-width:75%;
+            max-width:100%;
             gap: 17.5px;
             align-items: flex-start;
         }
 
         @media (max-width: 600px) {
             .project-frame {
-            max-width:100%;
+                flex-direction:column;
+                max-height:none;
+                max-width:100%;
+                gap:12.5px;
             }
         }
 
@@ -192,8 +177,7 @@
 
         .featured-project-description {
             line-height:1.5;
-            margin-top:10px;
-            margin-bottom:10px;
+            margin: 10px 0px 7.5px 0px;
         }
 
         a:link {
@@ -235,6 +219,9 @@
             <a href="/updates">Updates</a>
         </div>
     </nav>
+    <div class="note-style">
+        <p class="note-text">derekyt.dev version 1.1 is out. Click <a href="https://derekyt.dev/entries/august-2026/1">here</a> to read about it.</p>
+    </div>
     <p class="welcome-font">Welcome!</p>
     <img class="photo-light" src="assets/20260404-profilepic-light.JPG" width="225px" height="225px">
     <img class="photo-dark" src="assets/20260404-profilepic-dark.JPG" width="225px" height="225px">
@@ -242,8 +229,8 @@
     <p class="body-height">I make the Apple beta timelines, Android beta timelines, and compatibility charts projects. You can find links to those on the <a href="/projects">Projects</a> page.</p>
     <h2 class="featured">Featured project</h2>
     <div class="project-frame">
-        <img class="graphic-light" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/light.png" width="150px" height="150px">
-        <img class="graphic-dark" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/dark.png" width="150px" height="150px">
+        <img class="graphic-light" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/light.png">
+        <img class="graphic-dark" src="https://derekyt.dev/assets/graphics/apple-beta-timelines/dark.png">
         <div>
             <p class="featured-project-head">Apple beta timelines</p>
             <p class="featured-project-description">An extensive library of release dates for builds of Apple platforms.</p>

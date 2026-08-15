@@ -1,13 +1,14 @@
 <head>
-    <title>Projects – DerekYT</title>
+    <title>Projects &#8210; DerekYT</title>
     <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Font information (start) -->
+     <link rel="preconnect" href="https://rsms.me/">
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Font information (end) -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #000000;
+            background-color: #0a1015;
             background-image:url('https://derekyt.dev/assets/bg-images/20260608-webimage-4-720h-2.png');
             background-size:cover;
             background-position:center;
@@ -22,52 +23,39 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-top:30px;
-            padding-bottom:30px;
+            padding: 25px 20px 25px 20px;
         }
 
         @media (prefers-color-scheme: light) {
             body {
-                background-image:url('assets/bg-images/projects-background-desktop-light.png');
-                background-color:#ffffff;
-                color: #000000;
+                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-desktop-light.png');
             }
         }
 
         @media (prefers-color-scheme: dark) {
             body {
-                background-image:url('assets/bg-images/projects-background-desktop-dark.png');
-                background-color:#0a1015;
-                color: #ffffff;
-            }
-        }
-
-        @media (max-width:600px) {
-            body {
-                padding-inline:15px;
-            }
-            nav {
-                font-size:14px;
+                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-desktop-dark.png');
             }
         }
 
         @media (max-width:600px) and (prefers-color-scheme: light) {
-            body { background-image:url('assets/bg-images/projects-background-mobile-light.png'); }
+            body { background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-mobile-light.png'); }
         }
 
         @media (max-width:600px) and (prefers-color-scheme: dark) {
-            body { background-image:url('assets/bg-images/projects-background-mobile-dark.png'); }
+            body { background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-mobile-dark.png'); }
         }
 
         nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-size:14px;
         }
 
         .nav-links {
             display: flex;
-            gap:15px;
+            gap:10px;
         }
 
         .nav-links a {
@@ -85,23 +73,15 @@
             color:inherit;
             font-weight:500;
             margin-right:15px;
+            text-decoration:none;
         }
 
-        .beta-label-style {
-            background-color: rgba(255, 237, 118, 0.5);
-            margin-top: 20px;
-            /*margin-bottom: 20px;*/
-            padding:14px;
-            font-size:16px;
-            line-height:1.4;
-            border-radius: 7px;
-        }
-        
         .welcome-font {
             margin-top:20px;
             margin-bottom:20px;
             font-size:36px;
-            font-weight:600;
+            font-weight:500;
+            letter-spacing:-0.02em;
         }
         
         .heading-body-line-height {
@@ -127,11 +107,12 @@
         .project-selector {
             margin-top:5px;
             margin-bottom:10px;
+            font-weight:400;
         }
 
         .project-card {
             width:100%;
-            max-width:350px;
+            max-width:400px;
             container-type:inline-size;
             padding:7.5px 15px 15px;
             border-radius:12px;
@@ -182,6 +163,11 @@
             appearance:none;
             -webkit-appearance:none;
         }
+        
+        .project-selector select option {
+            background-color:#ffffff;
+            color:#000000;
+        }
 
         .project-picker svg {
             position:absolute;
@@ -194,7 +180,7 @@
         }
 
         .project-details p { margin-top:0; }
-        .project-description { margin-bottom:10px; font-size:16px; font-weight:500; line-height:1.25; }
+        .project-description { margin-bottom:10px; font-size:16px; font-weight:350; line-height:1.25; }
         .project-links { font-size:16px; }
         .project-card a:link,
         .project-card a:visited { color:inherit; opacity:1; }
@@ -202,15 +188,35 @@
         .project-details p:last-child { margin-bottom:0; }
 
         @media (max-width:600px) {
-            .project-card { border-radius:18px; }
-            .project-selector select { font-size:18px; }
-            .project-description { font-size:20px; }
+            .project-card {
+                border-radius:18px;
+            }
+
+            .project-selector select {
+                font-size:18px; 
+            }
+
+            .project-description { 
+                font-size:20px;
+            }
         }
 
         @container (max-width:500px) {
-            .project-selector select { font-size:16px; letter-spacing:0.005em; font-weight:500; }
-            .project-description { font-size:16px; line-height:1.4; font-weight:450; }
-            .project-links { font-size:15px; }
+            .project-selector select {
+                font-size:16px;
+                letter-spacing:0.005em;
+                font-weight:450;
+            }
+
+            .project-description {
+                font-size:16px;
+                line-height:1.4;
+                font-weight:400;
+            }
+
+            .project-links {
+                font-size:14px;
+            }
         }
 
         .footnote {
@@ -230,16 +236,15 @@
 <body>
     <header>
     <nav>
-        <span class="nav-brand">DerekYT</span>
+        <a class="nav-brand" href="/">DerekYT</a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/projects">Projects</a>
             <a href="/updates">Updates</a>
         </div>
     </nav>    
-    <div class="beta-label-style">This website is in beta. Some elements may not work properly.</div>
     <p class="welcome-font">Projects</p>
-    <p class="heading-body-line-height">Here, you can find Google Drive links and release notes to my projects.</p>
+    <p class="heading-body-line-height">Here, you can find info about and links to my projects.</p>
     <section class="project-selector" aria-label="Project details">
         <div class="project-card project-apple">
             <div class="project-picker">
@@ -255,7 +260,7 @@
             <div id="project-details" class="project-details">
                 <section data-project="apple">
                     <p class="project-description">View release dates for builds of Apple platforms.</p>
-                    <p class="project-links"><a href="https://drive.google.com/drive/folders/1Vw2k4fz856dKxGk3J6SnUQwa-9xgCM7D?usp=sharing" target="_blank" rel="noopener">Project link</a> <span style="font-weight:700;">&middot;</span> <a href="/releases/apple-beta-timelines/">Release notes</a></p>
+                    <p class="project-links"><a href="https://drive.google.com/drive/folders/1Vw2k4fz856dKxGk3J6SnUQwa-9xgCM7D?usp=sharing" target="_blank" rel="noopener">Project link</a> <span style="font-weight:700;">&middot;</span> <a href="/releases/apple-beta-timelines/">Release notes</a> <span style="font-weight:700;">&middot;</span> <a href="https://beta.derekyt.dev/projects/apple-beta-timelines">Try version 2.0 (beta)</a></p>
                 </section>
                 <section data-project="android" hidden>
                     <p class="project-description">View release dates for builds of Android versions.</p>

@@ -159,16 +159,22 @@
             font-weight:500;
             margin-right:15px;
         }
-        
-        .beta-banner-style {
-            background-color: rgba(255, 237, 118, 0.5);
+
+        .deprecation-label-style {
+            background-color: rgba(172, 7, 7, 0.5);
             margin-top: 20px;
-            padding: 15px;
-            font-size:14px;
+            padding:14px;
+            font-size:15px;
             line-height:1.4;
+            letter-spacing:0em;
             border-radius: 7px;
         }
-
+        
+        .deprecation-label-text-main {
+            font-size:15px;
+            margin: 0;
+        }
+        
         .welcome-font {
             margin-top:25px;
             margin-bottom:20px;
@@ -205,8 +211,8 @@
         }
 
         .update-metadata {
-            margin-top:0;
-            margin-bottom:10px;
+            margin-top:5px;
+            margin-bottom:5px;
             font-size:12px;
             opacity:0.5;
             letter-spacing:0.25px;
@@ -253,7 +259,10 @@
             <a href="/updates">Updates</a>
         </div>
     </nav>
-    <div class="beta-banner-style">This website is in beta. Some elements may not work properly.</div>
+    <div class="deprecation-label-style">
+        <p class="deprecation-label-text-main">This page will be deprecated soon.</p>
+        <p class="update-metadata" data-utc="2026-08-15T06:30Z">Aug 15, 2026 at 06:30 UTC</p>
+    </div>
     </header>
     <p class="welcome-font">Updates</p>
     <p class="heading-body-line-height">Upcoming changes to this website will be shared here first.</p>
@@ -262,7 +271,7 @@
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);
     el.textContent = "" + date.toLocaleString(undefined, {
-        year: 'numeric', month: 'long', day: 'numeric',
+        year: 'numeric', month: 'short', day: 'numeric',
         hour: '2-digit', minute: '2-digit',
         timeZoneName: 'short'
     });
