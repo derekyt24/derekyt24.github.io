@@ -1,6 +1,9 @@
+---
+---
 <head>
     <title>Apple beta timelines version 1.5 beta 2 &#8211; DerekYT</title>
-    <link rel="icon" type="image/x-icon" href="https://beta.derekyt.dev/assets/20260708-betafavicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
+    <link rel="stylesheet" href="/assets/style-sheets/apple-beta-timelines-releases.css">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -187,15 +190,8 @@
 </style>
 <body>
     <header>
-    <nav>
-        <span class="nav-brand">DerekYT</span>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>
-    </header>
+    {% include site-header.html %}
+</header>
     <div>
         <h1 class="welcome-font">What's new in Apple beta timelines version 1.5 beta 2</h1>
         <p class="heading-body-line-height">Added watchOS 4, 5, and 6 (excluding 6.1.x) timelines.</p>
@@ -204,7 +200,7 @@
         <p class="update-metadata">Build number: 15B01</p>
     </div>
     <br>
-<footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
+{% include site-footer.html %}
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);

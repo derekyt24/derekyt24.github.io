@@ -1,6 +1,9 @@
+---
+---
 <head>
     <title>Apple beta timelines version 1.5.6 &#8211; DerekYT</title>
-    <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
+    <link rel="stylesheet" href="/assets/style-sheets/apple-beta-timelines-releases.css">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -173,15 +176,8 @@
 
 <body>
     <header>
-    <nav>
-        <span class="nav-brand">DerekYT</span>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>
-    </header>
+    {% include site-header.html %}
+</header>
     <div>
         <p class="welcome-font">What's new in Apple beta timelines version 1.5.6</p>
         <p class="heading-body-line-height">In honor of Apple's 50th anniversary, all OS 26 timelines now feature headings with Apple's rainbow gradient and each platform's respective dark wallpaper as special edition timelines. Available through April 8.</p>
@@ -189,7 +185,7 @@
         <p class="update-metadata">Build number: 156A</p>
     </div>
     <br>
-<footer>AI models from Anthropic and OpenAI assisted in developing features on this site.</footer>
+{% include site-footer.html %}
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);

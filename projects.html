@@ -1,6 +1,8 @@
+---
+---
 <head>
     <title>Projects &#8210; DerekYT</title>
-    <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
     <!-- Font information (start) -->
      <link rel="preconnect" href="https://rsms.me/">
      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -34,7 +36,7 @@
 
         @media (prefers-color-scheme: dark) {
             body {
-                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-desktop-dark.png');
+                background-image:url('https://derekyt.dev/assets/bg-images/aug-16-projects-background-desktop-dark.png');
             }
         }
 
@@ -43,7 +45,7 @@
         }
 
         @media (max-width:600px) and (prefers-color-scheme: dark) {
-            body { background-image:url('https://derekyt.dev/assets/bg-images/aug-12-projects-background-mobile-dark.png'); }
+            body { background-image:url('https://derekyt.dev/assets/bg-images/aug-16-projects-background-mobile-dark.png'); }
         }
 
         nav {
@@ -85,8 +87,7 @@
         }
         
         .heading-body-line-height {
-            /*line-height:25px;*/
-            margin-bottom:15px;
+            line-height:1.4;
         }
 
         a:link {
@@ -112,7 +113,7 @@
 
         .project-card {
             width:100%;
-            max-width:400px;
+            max-width:350px;
             container-type:inline-size;
             padding:7.5px 15px 15px;
             border-radius:12px;
@@ -235,15 +236,8 @@
 </head>
 <body>
     <header>
-    <nav>
-        <a class="nav-brand" href="/">DerekYT</a>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>    
-    <p class="welcome-font">Projects</p>
+    {% include site-header.html %}
+<p class="welcome-font">Projects</p>
     <p class="heading-body-line-height">Here, you can find info about and links to my projects.</p>
     <section class="project-selector" aria-label="Project details">
         <div class="project-card project-apple">
@@ -274,7 +268,7 @@
         </div>
     </section>
     </header>
-<footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
+{% include site-footer.html %}
 <script>
     const projectSelect = document.getElementById("project-select");
     const projectDetails = document.querySelectorAll("[data-project]");

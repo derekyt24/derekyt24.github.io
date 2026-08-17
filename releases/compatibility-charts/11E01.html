@@ -1,6 +1,8 @@
+---
+---
 <head>
     <title>Compatibility charts version 1.1 RC (11E01) &#8211; DerekYT</title>
-    <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -177,15 +179,8 @@
 </style>
 <body>
     <header>
-    <nav>
-        <span class="nav-brand">DerekYT</span>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>
-    </header>
+    {% include site-header.html %}
+</header>
     <div>
         <p class="welcome-font">What's new in compatibility charts version 1.1 RC</p>
         <p class="heading-body-line-height">As an experiment, iPhone models in the iOS 9, 8, and 7 charts are now horizontally arranged by series (standard, SE, etc.).</p>
@@ -194,7 +189,7 @@
         <p class="update-metadata">Build number: 11E01</p>
     </div>
     <br>
-<footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
+{% include site-footer.html %}
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);

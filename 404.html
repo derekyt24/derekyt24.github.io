@@ -1,6 +1,8 @@
+---
+---
 <head>
     <title>Not found &#8211; DerekYT</title>
-    <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -138,19 +140,12 @@
 </style>
 <body>
     <header>
-    <nav>
-        <span class="nav-brand">DerekYT</span>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>    
-    <div class="heading-div-height">
+    {% include site-header.html %}
+<div class="heading-div-height">
         <p class="page-not-found-font">404</p>
         <p class="heading-body-line-height">Uh oh. That page couldn't be found.</p>
         <p class="heading-body-line-height">The page you were looking for may have moved or is missing. Double check your URL.</p>
     </div>
     </header>
-<footer>Some features on this page were coded and/or assisted by Claude Sonnet 4.6 and GPT-5.5. <a href="/on-ai-and-vibe-coding">Learn more</a></footer>
+{% include site-footer.html %}
 </body>
