@@ -1,6 +1,9 @@
+---
+---
 <head>
     <title>Apple beta timelines version 1.5.12 &#8211; DerekYT</title>
-    <link rel="icon" type="image/png" href="/assets/20260708-favicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260815-favicon.png">
+    <link rel="stylesheet" href="/assets/style-sheets/apple-beta-timelines-releases.css">
 <!-- Font information (start) -->
 <link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -38,8 +41,9 @@
 
 
         nav {
-            display: flex;
+            display:flex;
             justify-content:space-between;
+            font-size:14px;
         }
         
         @media (max-width:600px) {
@@ -86,7 +90,7 @@
 
         .nav-links {
             display: flex;
-            gap:15px;
+            gap:10px;
         }
 
         .nav-links a {
@@ -121,8 +125,8 @@
             letter-spacing:-0.5px;
         }
         
-        .heading-body-line-height {
-            line-height:25px;
+        .change {
+            line-height:1.2;
         }
 
         .ver-head-font {
@@ -174,33 +178,28 @@
 </head>
 <body>
     <header>
-    <nav>
-        <span class="nav-brand">DerekYT</span>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/updates">Updates</a>
-        </div>
-    </nav>
-    </header>
+    {% include site-header.html %}
+</header>
     <div>
         <p class="welcome-font">What's new in Apple beta timelines version 1.5.12</p>
+        <div class="change">
         <p>Added final builds for OS 26.5.</p>
         <p>Added iOS and iPadOS 15.8.8.</p>
         <p>Added iOS and iPadOS 16.7.16.</p>
         <p>Added iOS and iPadOS 18.7.8.</p>
         <p>Added iOS and iPadOS 18.7.9.</p>
+        </div>
         <p class="update-metadata" data-utc="2026-05-12T04:55Z">May 12, 2026 • 04:55 UTC</p>
         <p class="update-metadata">Build number: 1512A</p>
     </div>
     <br>
-<footer>AI models from Anthropic and OpenAI assisted in developing features on this site.</footer>
+{% include site-footer.html %}
 <script>
     document.querySelectorAll('[data-utc]').forEach(el => {
     const date = new Date(el.dataset.utc);
     el.textContent = "" + date.toLocaleString(undefined, {
         year: 'numeric', month: 'long', day: 'numeric',
-        hour: '2-digit', minute: '2-digit',
+        hour: 'numeric', minute: '2-digit',
         timeZoneName: 'short'
     });
 });
