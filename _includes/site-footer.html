@@ -4,14 +4,14 @@
         letter-spacing:0.03em;
         opacity:0.5;
         margin-top:auto;
-        padding-top:50px;
+        padding-top:10px;
     }
 
     .site-footer .ai-models-tooltip {
         position:relative;
         cursor:help;
         text-decoration:underline dotted;
-        text-underline-offset:3px;
+        text-underline-offset:2px;
     }
 
     .site-footer .ai-models-tooltip::after {
@@ -43,6 +43,10 @@
 
     .site-footer .ai-models-tooltip[data-tooltip=""]::after {
         display:none;
+    }
+
+    .bullet {
+        font-weight: 200;
     }
 </style>
 <footer class="site-footer">Try experimental features at <a href="https://beta.derekyt.dev/">beta.derekyt.dev</a> <span class="bullet">&bullet;</span> <span class="ai-models-tooltip" data-tooltip="from Anthropic and OpenAI" tabindex="0">AI models</span> assisted in developing features on this site.</footer>
