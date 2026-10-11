@@ -32,27 +32,71 @@
             font-size: 14px;
         }
         
-        @media (max-width:600px) and (prefers-color-scheme: light) {
+        @media (max-width: 600px) and (prefers-color-scheme: light) {
             body {
-                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-mobile-light.png');
+                background-image: url('https://derekyt.dev/assets/bg-images/home-mobile.png');
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                pointer-events: none;
+                z-index: -1;
+            }
+        }
+
+        @media (max-width: 600px) and (prefers-color-scheme: dark) {
+            body {
+                background-image: url('https://derekyt.dev/assets/bg-images/home-mobile.png');
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.75);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                pointer-events: none;
+                z-index: -1;
             }
         }
 
         @media (min-width: 601px) and (prefers-color-scheme: light) {
             body {
-                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-desktop-light.png');
+                background-image: url('https://derekyt.dev/assets/bg-images/home-desktop.png');
             }
-        }
 
-        @media (max-width:600px) and (prefers-color-scheme: dark) {
-            body {
-                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-mobile-dark.png');
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.15);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                pointer-events: none;
+                z-index: -1;
             }
         }
 
         @media (min-width: 601px) and (prefers-color-scheme: dark) {
             body {
-                background-image:url('https://derekyt.dev/assets/bg-images/aug-12-home-background-desktop-dark.png');
+                background-image: url('https://derekyt.dev/assets/bg-images/home-desktop.png');
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.75);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                pointer-events: none;
+                z-index: -1;
             }
         }
         
@@ -144,7 +188,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin: 0;
+            margin: 0px 0px 2.5px 0px;
             letter-spacing:-0.02em;
             font-size:24px;
             font-weight:500;
@@ -152,7 +196,7 @@
 
         .featured-project-description {
             line-height:1.5;
-            margin: 10px 0px 7.5px 0px;
+            margin: 7.5px 0px 7.5px 0px;
         }
 
         a:link {
@@ -237,7 +281,7 @@
     <p class="welcome-font">Welcome!</p>
     <img class="photo-light" src="assets/20260827-profilepic-light.jpg" width="225px" height="225px">
     <img class="photo-dark" src="assets/20260827-profilepic-dark.jpg" width="225px" height="225px">
-    <p class="body-text-main">Hi! I'm Derek. Student, designer, and enthusiast for tech, modern cars, and weather.</p>
+    <p class="body-text-main">Hi! I'm Derek. Student, learning dev, and enthusiast for tech, (modern) cars, and weather.</p>
     <p class="body-text">I make the Apple beta timelines, Android beta timelines, and compatibility charts projects. You can find links to those on the <a href="/projects">Projects</a> page.</p>
     <h2 class="featured">Featured project</h2>
     <div class="project-frame">
