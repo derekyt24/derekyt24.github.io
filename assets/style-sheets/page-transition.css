@@ -7,17 +7,20 @@ body {
     transition: opacity 200ms ease-in-out;
 }
 
-body::before {
+body::after {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;
-    background-image: var(--page-transition-background, none);
-    background-position: center;
-    background-size: cover;
+    z-index: -2;
+    background-color: var(--page-transition-background-color, transparent);
+    background-image: var(--page-transition-background-image, var(--page-transition-background, none));
+    background-position: var(--page-transition-background-position, center);
+    background-size: var(--page-transition-background-size, cover);
+    background-repeat: var(--page-transition-background-repeat, no-repeat);
+    background-attachment: var(--page-transition-background-attachment, fixed);
     opacity: 0;
     transform: scale(1.02);
-    transition: opacity 250ms ease-out, transform 250ms ease-out;
+    transition: opacity 350ms ease-out, transform 350ms ease-out;
     pointer-events: none;
 }
 
@@ -25,14 +28,36 @@ body.page-ready {
     opacity: 1;
 }
 
-body.page-ready::before {
+body.page-ready::after {
     opacity: 1;
     transform: scale(1);
 }
 
+/* Fade the current page out before same-site link navigation. */
+body.page-leaving {
+    opacity: 1;
+    background-image: none !important;
+    background-color: #0a1015 !important;
+}
+
+body.page-leaving > * {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+body.page-leaving::after {
+    opacity: 0;
+    transform: scale(1.02);
+}
+
+body.page-leaving::before {
+    opacity: 0;
+    transition: opacity 350ms ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
     body,
-    body::before {
+    body::after {
         opacity: 1;
         transform: none;
         transition: none;

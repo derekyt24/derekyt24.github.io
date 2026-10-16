@@ -1,0 +1,695 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0a1015;
+    color: #ffffff;
+    font-family: "SF Pro", "Inter", sans-serif;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "SF Pro";
+    src: url("https://beta.derekyt.dev/assets/fonts/SF-Pro.woff2") format("woff2");
+    font-weight: 1 1000;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SF Pro";
+    src: url("https://beta.derekyt.dev/assets/fonts/SF-Pro-Italic.woff2") format("woff2");
+    font-weight: 1 1000;
+    font-style: italic;
+    font-display: swap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 750px);
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.nav-brand {
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    letter-spacing:0em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links a {
+    opacity: 0.72;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    opacity: 1;
+}
+
+main {
+    flex: 1;
+    width: min(100%, 750px);
+    margin: 25px auto 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 550;
+    letter-spacing: 0em;
+    line-height: 1.1;
+}
+
+.timeline-picker-note {
+    margin: 10px 0px 5px 0px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 21px;
+    font-weight:500;
+    line-height:1.4;
+    letter-spacing: -0.01em;
+}
+
+.version-picker {
+    width: fit-content;
+    display: block;
+    margin: 7px auto 15px;
+}
+
+.version-picker select {
+    appearance: none;
+    -webkit-appearance: none;
+    field-sizing: content;
+    margin: 0;
+    padding: 5px 28px 6px 8px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+}
+
+.version-picker span {
+    display: inline-grid;
+    position: relative;
+}
+
+.version-picker svg {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.release-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: initial;
+    row-gap: var(--timeline-row-gap, 17.5px);
+    column-gap: 0;
+    align-items: start;
+}
+
+/* Optional nested layout groups let one timeline use differently sized sections. */
+.release-section {
+    display: grid;
+    grid-column: 1 / -1;
+    width: min(100%, 800px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-self: center;
+    row-gap: var(--timeline-row-gap, 15px);
+    column-gap: 0;
+    align-items: start;
+}
+
+.release-section-wide {
+    width: min(100%, 950px);
+}
+
+@media (min-width: 601px) {
+    .release-section-wide {
+        width: min(100%, 1550px);
+    }
+
+    .security-update-row.security-update-row--3 {
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .security-update-row.security-update-row--8 {
+        width: 100%;
+        justify-self: center;
+    }
+
+    .security-update-row.security-update-row--5 {
+        width: fit-content;
+        justify-self: center;
+    }
+}
+
+.security-update-mobile {
+    display: none;
+}
+
+.security-update-desktop {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+.security-update-row {
+    display: grid;
+    width: 100%;
+}
+
+.security-update-row--2 {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.security-update-row--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+.security-update-row--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+.security-update-row--5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+.security-update-row--6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+.security-update-row--7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+.security-update-row--8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    column-gap: 15px;
+}
+
+/* Opt-in for short historical rows that should follow their content instead of filling the section. */
+.security-update-row.security-update-row--content {
+    width: fit-content;
+    max-width: 100%;
+    grid-template-columns: repeat(var(--security-update-count), max-content);
+    justify-self: center;
+    column-gap: 15px;
+}
+
+.security-update-row .release {
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (min-width: 751px) {
+    .release-grid {
+        width: min(calc(100vw - 40px), var(--timeline-grid-max-width, 750px));
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.release-align-left {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.release-align-right {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.release-pair {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+}
+
+.release-pair-compact {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.release-pair-builds,
+.release-pair-tight {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+}
+
+.release-pair-builds {
+    column-gap: 75px;
+}
+
+.release-pair-tight {
+    column-gap: 30px;
+}
+
+.release-trio.release-trio-tight {
+    column-gap: 30px;
+}
+
+.release-trio {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.release-quad {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.release-quad.release-quad-tight {
+    column-gap: 25px;
+}
+
+/* Supplemental releases share one section, so give consecutive standalone rows
+   the same breathing room as the main timeline grid. */
+.supplemental > .release + .release {
+    margin-top: var(--timeline-row-gap, 17.5px);
+}
+
+.supplemental .release-trio+.release-trio {
+    margin-top: 24px;
+}
+
+.supplemental .release-quad+.release-quad {
+    margin-top: 24px;
+}
+
+.release-name,
+.section-label {
+    margin: 0 0 4px;
+    color: rgba(255, 255, 255, 0.67);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.release-name {
+    font-weight: 500;
+}
+
+.release-date {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 28px;
+    font-weight: 450;
+    letter-spacing: 0em;
+}
+
+.release-note {
+    margin: 3px 0 0;
+    color: rgba(255, 255, 255, 0.67);
+    font-size: 14px;
+    font-weight: 450;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.release-name,
+.release-date,
+.release-note {
+    font-optical-sizing: none;
+}
+
+.span-two {
+    grid-column: 1 / -1;
+}
+
+.supplemental {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.supplemental .section-label {
+    font-size: 21px;
+    font-weight:450;
+    margin: 5px 0px 15px 0px;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.release-grid > .section-label,
+.release-section .section-label {
+    font-size: 21px;
+    font-weight: 450;
+    margin: 5px 0px 0px 0px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* A second, in-timeline section title—for example, Security Updates after
+   a version's main and supplemental releases. */
+.supplemental .section-label-divider {
+    margin-top: 30px;
+}
+
+.supplemental .supplemental-intro-note {
+    margin: 0 auto 17.5px;
+}
+
+.timeline-message {
+    margin: 20px 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 18px;
+}
+
+.timeline-footnote {
+    width: min(100%, 1100px);
+    margin: 30px auto 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+    line-height:1.4;
+    letter-spacing: 0.01em;
+}
+
+.timeline-intro-note {
+    width: min(100%, 750px);
+    margin: 10px 0px 15px 0px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 21px;
+    font-weight: 450;
+    letter-spacing: -0.005em;
+    line-height:1.4;
+    white-space: pre-line;
+}
+
+.timeline-intro-mac {
+    width: min(100%, 750px);
+    margin: 22.5px auto 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 450;
+    letter-spacing: 0em;
+    line-height:1.5;
+    white-space: pre-line;
+}
+
+/* Lets a macOS version note outgrow the 750px timeline column when needed. */
+@media (min-width: 751px) {
+    .timeline-intro-mac-wide {
+        width: min(calc(100vw - 40px), 950px);
+        max-width: none;
+        margin-left: 50%;
+        margin-right: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-intro-note.timeline-intro-after-supplemental,
+.timeline-intro-mac.timeline-intro-after-supplemental {
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+@media (max-width:600px) {
+    body {
+        background-attachment: scroll;
+        padding: 20px;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .timeline-picker-note {
+        font-size: 16px;
+    }
+
+    .version-picker {
+        margin: 7px auto 10px;
+    }
+
+    .version-picker select {
+        font-size: 19px;
+    }
+
+    .release-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: initial;
+        row-gap: var(--timeline-row-gap-mobile, 15px);
+        column-gap: var(--timeline-column-gap-mobile, 28px);
+    }
+
+    .release-pair {
+        gap: 20px 28px;
+    }
+
+    .security-update-desktop {
+        display: none;
+    }
+
+    .security-update-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1 / -1;
+        width: 360px;
+        max-width: 100%;
+        justify-self:center;
+        gap: 15px;
+    }
+
+    .security-update-mobile .section-label {
+        width: 100%;
+    }
+
+    .security-update-mobile-row {
+        display: grid;
+        width: fit-content;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .security-update-mobile-row--1 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .security-update-mobile-row--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .security-update-mobile-row--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .security-update-mobile-row--4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .security-update-mobile-row--5,
+    .security-update-mobile-row--6,
+    .security-update-mobile-row--7,
+    .security-update-mobile-row--8 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .security-update-mobile .release {
+        min-width: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .security-update-mobile .release-note {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .supplemental > .release + .release {
+        margin-top: var(--timeline-row-gap-mobile, 15px);
+    }
+
+    .release-pair-builds,
+    .release-pair-tight {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    .release-trio {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .release-quad {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .supplemental .release-trio+.release-trio {
+        margin-top: 20px;
+    }
+
+    .supplemental .release-quad+.release-quad {
+        margin-top: 20px;
+    }
+
+    .release-name,
+    .section-label {
+        margin: 0px 0px 4.5px;
+        font-size: 11px;
+        line-height: 1.2;
+        letter-spacing:0.02em;
+    }
+
+    .release-date {
+        font-size: 18px;
+        font-weight:450;
+        line-height: 1;
+        letter-spacing: 0em;
+    }
+
+    .release-note {
+        margin: 4px 0px 0px;
+        line-height: 1.4;
+        font-size: 10px;
+        letter-spacing:0.02em;
+    }
+
+    .release-align-left {
+        padding-left: 0;
+    }
+
+    .release-align-right {
+        padding-right: 0;
+    }
+
+    .supplemental .release-note {
+        line-height: 1.4;
+    }
+
+    .supplemental .section-label {
+        letter-spacing:-0.005em;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .release-grid > .section-label,
+    .release-section .section-label {
+        letter-spacing: -0.005em;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .supplemental .section-label-divider {
+        margin-top: 25px;
+    }
+
+    .timeline-footnote {
+        font-size: 12px;
+    }
+
+    .timeline-intro-note,
+    .timeline-intro-mac {
+        line-height:1.5;
+        font-size: 12px;
+    }
+
+    .timeline-intro-mac-wide {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+    }
+}
+
+@media (max-width:380px) {
+    body {
+        padding: 20px 15px 20px 15px;
+    }
+
+    .release-grid {
+        row-gap: 18px;
+        column-gap: 16px;
+    }
+
+    .release-pair {
+        column-gap: 16px;
+    }
+
+    .release-pair-builds,
+    .release-pair-tight {
+        column-gap: 12px;
+    }
+
+    .release-name {
+        font-size: 10px;
+    }
+
+    .release-date {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .release-note {
+        font-size: 8px;
+    }
+
+    .supplemental .section-label {
+        font-size: 15px;
+    }
+}

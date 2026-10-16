@@ -117,14 +117,22 @@
             color: #ffffff;
         }
 
-        .note-style {
-            background-color: rgba(119, 171, 255, 0.33);
-            margin-top: 20px;
+        .apple-beta-timelines-note-style {
+            background-image: linear-gradient(to right, rgba(56, 123, 142, 0.75), rgba(249, 150, 0, 0.75));
+            margin-top: 10px;
             padding:14px;
             font-size:15px;
             line-height:1.4;
             letter-spacing:0em;
             border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .apple-beta-timelines-note-style a,
+        .apple-beta-timelines-note-style a:link,
+        .apple-beta-timelines-note-style a:visited {
+            color: inherit;
+            text-decoration: none;
         }
 
         .note-text {
@@ -278,6 +286,7 @@
     <header>
     {% include site-header.html %}
     </header>
+    <div class="apple-beta-timelines-note-style">Apple beta timelines version 2.0 is here. <a href="https://derekyt.dev/projects/apple-beta-timelines">Click here</a> to get a look.</div>
     <p class="welcome-font">Welcome!</p>
     <img class="photo-light" src="assets/20260827-profilepic-light.jpg" width="225px" height="225px">
     <img class="photo-dark" src="assets/20260827-profilepic-dark.jpg" width="225px" height="225px">
@@ -290,7 +299,7 @@
         <div>
             <p class="featured-project-head">Apple beta timelines</p>
             <p class="featured-project-description">An extensive library of release dates for builds of Apple platforms.</p>
-            <p class="featured-project-description"><a href="https://drive.google.com/drive/folders/1Vw2k4fz856dKxGk3J6SnUQwa-9xgCM7D?usp=sharing">Explore</a> <span style="font-weight:700;">&middot;</span> <a href="https://derekyt.dev/releases/apple-beta-timelines">Release notes</a> <span style="font-weight:700;">&middot;</span> <a href="https://beta.derekyt.dev/projects/apple-beta-timelines">Try version 2.0 (beta)</a></p>
+            <p class="featured-project-description"><a href="https://derekyt.dev/projects/apple-beta-timelines">Explore version 2.0</a> <span style="font-weight:700;">&middot;</span> <a href="https://derekyt.dev/releases/apple-beta-timelines">Release notes</a> </p>
         </div>
     </div>
 {% include site-footer.html %}

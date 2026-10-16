@@ -1,8 +1,9 @@
-name: Publish derekyt.dev 1.1.1
+name: Apple beta timelines version 2.0 is here
 
 on:
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "0 19 16 10 *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,7 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "$(date -u +%F)" != "2026-08-17" ]; then
+          if [ "$(date -u +%F)" != "2026-10-16" ]; then
             echo "Not the scheduled publication date."
             exit 0
           fi
