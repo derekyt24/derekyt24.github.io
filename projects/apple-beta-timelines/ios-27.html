@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iOS 27 &#8211; Apple beta timelines</title>
-    <link rel="icon" type="image/png" href="/assets/20260831-betafavicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260831-favicon.png">
     <link rel="stylesheet" href="../../assets/style-sheets/apple-beta-timelines-glass.css">
     <style>
         @media (max-width:600px) and (prefers-color-scheme: light) {
@@ -45,6 +45,7 @@
             <span>
                 <select id="software-version" aria-label="Choose an iOS 27 version">
                     <option value="27-0">iOS 27.0</option>
+                    <option value="27-1">iOS 27.1</option>
                     <option value="27-2">iOS 27.2</option>
                 </select>
                 <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
@@ -53,6 +54,7 @@
             </span>
         </label>
 
+        <p id="timeline-intro" hidden></p>
         <section id="release-grid" class="release-grid" aria-live="polite"></section>
     </main>
     <footer id="timeline-footnote" class="timeline-footnote" hidden></footer>
@@ -81,21 +83,37 @@
                     { name: "iOS 27.0.1", date: "Sep 28, 2026" },
                 ]
             },
+            "27-1": {
+                label: "iOS 27.1",
+                intro: "Released exclusively for iPhone Duo.\nFor other devices, select iOS 27.2.",
+                releases: [
+                    { name: "iOS 27.1 (build 1)", date: "Oct 12, 2026" },
+                    { name: "iOS 27.1 (build 2)", date: "Oct 23, 2026" },
+                ]
+            },
             "27-2": {
                 label: "iOS 27.2",
                 releases: [
                     { name: "iOS 27.2 beta 1", date: "Sep 16, 2026" },
                     { name: "iOS 27.2 beta 2", date: "Sep 21, 2026" },
-                    { name: "iOS 27.2 beta 3", date: "Oct 5, 2026", spanTwo: true },
+                    { name: "iOS 27.2 beta 3", date: "Oct 5, 2026" },
+                    { name: "iOS 27.2 beta 4", date: "Oct 13, 2026" },
+                    { name: "iOS 27.2 RC build", date: "Oct 19, 2026", spanTwo: true },
                 ]
             }
         };
 
         const versionSelect = document.getElementById("software-version");
         const releaseGrid = document.getElementById("release-grid");
+        const timelineIntro = document.getElementById("timeline-intro");
         const timelineFootnote = document.getElementById("timeline-footnote");
 
         function releaseMarkup(release) {
+            if (release.trio) {
+                const className = release.className ? ` ${release.className}` : "";
+                return `<div class="release-trio${className}">${release.trio.map(releaseMarkup).join("")}</div>`;
+            }
+
             if (release.quad) {
                 const className = release.className ? " " + release.className : "";
                 return `<div class="release-quad${className}">${release.quad.map(releaseMarkup).join("")}</div>`;
@@ -106,6 +124,7 @@
             }
 
             const spanClass = release.spanTwo ? " span-two" : "";
+            const name = release.name ? `<p class="release-name">${release.name}</p>` : "";
             const note = release.note ? `<p class="release-note">${release.note}</p>` : "";
             return `<article class="release${spanClass}">
                 <p class="release-name">${release.name}</p>
@@ -119,12 +138,16 @@
             if (!timeline) {
                 releaseGrid.setAttribute("aria-label", "Timeline coming soon");
                 releaseGrid.innerHTML = '<p class="timeline-message span-two">This timeline is coming soon.</p>';
+                timelineIntro.hidden = true;
+                timelineIntro.textContent = "";                
                 timelineFootnote.hidden = true;
                 timelineFootnote.textContent = "";
                 return;
             }
 
             releaseGrid.setAttribute("aria-label", `${timeline.label} release dates`);
+            timelineIntro.textContent = timeline.intro ?? "";
+            timelineIntro.hidden = !timeline.intro;
             timelineFootnote.textContent = timeline.footnote ?? "";
             timelineFootnote.hidden = !timeline.footnote;
             let markup = timeline.releases.map(releaseMarkup).join("");

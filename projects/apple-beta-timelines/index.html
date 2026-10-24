@@ -3,8 +3,8 @@
 <head>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <title>Apple beta timelines &#8211; DerekYT (beta)</title>
-    <link rel="icon" type="image/png" href="/assets/20260831-betafavicon.png">
+    <title>Apple beta timelines &#8211; DerekYT</title>
+    <link rel="icon" type="image/png" href="/assets/20260831-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -186,14 +186,20 @@
         .welcome-font {
             margin-top:20px;
             margin-bottom:15px;
-            font-size:42px;
+            font-size:36px;
             font-weight:500;
-            font-variation-settings: "wdth" 116;
         }
 
         .heading-body-line-height {
+            max-width: 80%;
             line-height:1.5;
-            margin: 10px 0 10px;
+            margin: 10px auto 10px;
+        }
+
+        @media (max-width: 600px) {
+            .heading-body-line-height {
+                max-width:100%;
+            }
         }
 
         .link-margin {

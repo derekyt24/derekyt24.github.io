@@ -336,6 +336,12 @@ body {
         color:rgba(255, 255, 255, 0.75);
     }
 
+    #timeline-intro {
+        line-height:25px;
+        margin:10px 0 20px;
+        white-space: pre-line;
+}
+
     .timeline-message {
         margin:20px 0;
         color:rgba(255, 255, 255, 0.72);
@@ -451,6 +457,7 @@ body {
             font-size:15px;
         }
     }
+
     .timeline-footnote {
         width:min(100%, 700px);
         margin:30px auto 0;

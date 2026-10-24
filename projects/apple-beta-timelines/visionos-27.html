@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>visionOS 27 &#8211; Apple beta timelines</title>
-    <link rel="icon" type="image/png" href="/assets/20260831-betafavicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260831-favicon.png">
     <link rel="stylesheet" href="../../assets/style-sheets/apple-beta-timelines.css">
     <style>
         @media (max-width:600px) {
@@ -33,6 +33,7 @@
             <span>
                 <select id="software-version" aria-label="Choose a visionOS 27 version">
                     <option value="27-0">visionOS 27.0</option>
+                    <option value="27-2">visionOS 27.2</option>
                 </select>
                 <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                     <path d="M3 5.5 8 10.5l5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -63,8 +64,21 @@
                         ],
                         className: "release-pair-builds",
                     }
+                ],
+                supplemental: [
+                    { name: "visionOS 27.0.1", date: "September 28, 2026" },
                 ]
-            }
+            },
+            "27-2": {
+                label: "visionOS 27.2",
+                releases: [
+                    { name: "visionOS 27.2 beta 1", date: "September 16, 2026", alignment: "left" },
+                    { name: "visionOS 27.2 beta 2", date: "September 21, 2026", alignment: "right" },
+                    { name: "visionOS 27.2 beta 3", date: "October 5, 2026", alignment: "left" },
+                    { name: "visionOS 27.2 beta 4", date: "October 13, 2026", alignment: "right" },
+                    { name: "visionOS 27.2 RC build", date: "October 19, 2026", spanTwo: true },
+                ]
+            },
         };
 
         const versionSelect = document.getElementById("software-version");

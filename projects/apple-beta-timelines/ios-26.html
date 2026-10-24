@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iOS 26 &#8211; Apple beta timelines</title>
-    <link rel="icon" type="image/png" href="/assets/20260831-betafavicon.png">
+    <link rel="icon" type="image/png" href="/assets/20260831-favicon.png">
     <link rel="stylesheet" href="../../assets/style-sheets/apple-beta-timelines-glass.css">
     <style>
          @media (max-width:600px) and (prefers-color-scheme: light) {
@@ -224,11 +224,12 @@
                 label: "iOS 26.7.x",
                 releases: [
                     {
-                        pair: [
+                        trio: [
                             { date: "iOS 26.7", note: "RC build: Sep 9, 2026\nFinal build: Sep 14, 2026" },
                             { date: "iOS 26.7.1", note: "Final build: Sep 28, 2026" },
+                            { date: "iOS 26.7.2", note: "RC build: Oct 19, 2026" },
                         ],
-                        className: "release-pair-tight"
+                        className: "release-trio-tight"
                     }
                 ]
             }
@@ -243,6 +244,12 @@
                 const className = release.className ? " " + release.className : "";
                 return `<div class="release-quad${className}">${release.quad.map(releaseMarkup).join("")}</div>`;
             }
+
+            if (release.trio) {
+                const className = release.className ? ` ${release.className}` : "";
+                return `<div class="release-trio${className}">${release.trio.map(releaseMarkup).join("")}</div>`;
+            }            
+
             if (release.pair) {
                 const className = release.className ? ` ${release.className}` : "";
                 return `<div class="release-pair${className}">${release.pair.map(releaseMarkup).join("")}</div>`;
