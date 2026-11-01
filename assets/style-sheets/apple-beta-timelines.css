@@ -425,10 +425,14 @@ h1 {
     margin: 10px 0px 15px 0px;
     color: rgba(255, 255, 255, 0.75);
     font-size: 21px;
-    font-weight: 450;
+    font-weight: 500;
     letter-spacing: -0.005em;
     line-height:1.4;
     white-space: pre-line;
+}
+
+.release-grid > .timeline-intro-in-grid {
+    margin: 0 auto 17.5px;
 }
 
 .timeline-intro-mac {

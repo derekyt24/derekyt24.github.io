@@ -60,14 +60,13 @@
         </label>
 
         <section id="release-grid" class="release-grid" aria-live="polite"></section>
-        <p id="timeline-intro" class="timeline-intro-note" hidden></p>
     </main>
     <footer id="timeline-footnote" class="timeline-footnote" hidden></footer>
     <script>
         const timelines = {
             "16-0": {
                 label: "iPadOS 16.0",
-                intro: "iPadOS 16 released as iPadOS 16.1 on Oct 24, 2022. See 'iPadOS 16.1' for more.",
+                intro: "iPadOS 16 released as iPadOS 16.1 on October 24, 2022.\nSelect iPadOS 16.1 to learn more.",
                 releases: [
                     { name: "iPadOS 16.0 beta 1", date: "June 6, 2022", alignment: "left" },
                     { name: "iPadOS 16.0 beta 2", date: "June 22, 2022", alignment: "right" },
@@ -246,7 +245,6 @@
 
         const versionSelect = document.getElementById("software-version");
         const releaseGrid = document.getElementById("release-grid");
-        const timelineIntro = document.getElementById("timeline-intro");
         const timelineFootnote = document.getElementById("timeline-footnote");
 
         function releaseMarkup(release) {
@@ -280,19 +278,19 @@
             if (!timeline) {
                 releaseGrid.setAttribute("aria-label", "Timeline coming soon");
                 releaseGrid.innerHTML = '<p class="timeline-message span-two">This timeline is coming soon.</p>';
-                timelineIntro.hidden = true;
-                timelineIntro.textContent = "";
                 timelineFootnote.hidden = true;
                 timelineFootnote.textContent = "";
                 return;
             }
 
             releaseGrid.setAttribute("aria-label", `${timeline.label} release dates`);
-            timelineIntro.textContent = timeline.intro ?? "";
-            timelineIntro.hidden = !timeline.intro;
             timelineFootnote.textContent = timeline.footnote ?? "";
             timelineFootnote.hidden = !timeline.footnote;
             let markup = timeline.releases.map(releaseMarkup).join("");
+
+            if (timeline.intro) {
+                markup += `<p class="timeline-intro-note timeline-intro-in-grid span-two">${timeline.intro}</p>`;
+            }
 
             if (timeline.supplemental?.length) {
                 markup += `<section class="span-two supplemental" aria-label="Supplemental releases">

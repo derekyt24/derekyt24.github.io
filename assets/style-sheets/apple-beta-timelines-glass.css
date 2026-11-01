@@ -195,6 +195,7 @@ body {
     }
 
     .version-picker {
+        width:fit-content;
         display:block;
         margin:7px auto 10px;
     }
@@ -338,6 +339,8 @@ body {
 
     #timeline-intro {
         line-height:25px;
+        font-weight:500;
+        color: rgba(255,255,255,0.75);
         margin:10px 0 20px;
         white-space: pre-line;
 }
