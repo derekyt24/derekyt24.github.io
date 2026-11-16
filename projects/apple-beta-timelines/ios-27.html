@@ -47,6 +47,7 @@
                     <option value="27-0">iOS 27.0</option>
                     <option value="27-1">iOS 27.1</option>
                     <option value="27-2">iOS 27.2</option>
+                    <option value="27-3">iOS 27.3</option>
                 </select>
                 <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                     <path d="M3 5.5 8 10.5l5-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -98,9 +99,25 @@
                     { name: "iOS 27.2 beta 2", date: "Sep 21, 2026" },
                     { name: "iOS 27.2 beta 3", date: "Oct 5, 2026" },
                     { name: "iOS 27.2 beta 4", date: "Oct 13, 2026" },
-                    { name: "iOS 27.2 RC build", date: "Oct 19, 2026", spanTwo: true },
+                    {
+                        pair: [
+                            { name: "iOS 27.2 RC build", date: "Oct 19, 2026" },
+                            { name: "iOS 27.2 final build", date: "Oct 26, 2026" },
+                        ],
+                        className: "release-pair-builds"
+                    },
+                ],
+                supplemental: [
+                    { name: "iOS 27.2.1", date: "Nov 9, 2026" },
                 ]
-            }
+            },
+            "27-3": {
+                label: "iOS 27.3",
+                releases: [
+                    { name: "iOS 27.3 beta 1", date: "Nov 3, 2026" },
+                    { name: "iOS 27.3 beta 2", date: "Nov 16, 2026" },
+                ]
+            },
         };
 
         const versionSelect = document.getElementById("software-version");
