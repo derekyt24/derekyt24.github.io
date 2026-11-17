@@ -115,18 +115,31 @@ nav {
 
 .changes-class {
     letter-spacing:-0.015em;
-    line-height: 1.5;
-    margin: 7.5px 0px 7.5px 0px;
+    line-height: 25px;
+    margin: 5px 0px 5px 0px;
 }
 
 .changes-section {
     margin: 12.5px 0px 12.5px 0px;
 }
 
+.changes-section-new {
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 15px 15px 10px 15px;
+    margin-bottom: 15px;
+}
+
 .changes-class-last {
     letter-spacing:-0.015em;
     line-height: 1.5;
     margin: 7.5px 0px 3px 0px;
+}
+
+.changes-class-last-new {
+    letter-spacing:-0.015em;
+    line-height: 1.5;
+    margin: 7.5px 0px 0px 0px;
 }
 
 hr {
@@ -149,12 +162,46 @@ hr {
     margin: 15px 0 0px;
 }
 
+.build-title-new {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0px 0px 7.5px 0px;
+}
+
 .update-metadata {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 12px;
     opacity: 0.5;
     letter-spacing: 0.02em;
+}
+
+.update-metadata-new {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    opacity: 0.5;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+    .welcome-font {
+        font-size: 32px;
+    }
+    
+    .build-title-new {
+        font-size: 18px;
+    }
+
+    .changes-class, .changes-class-last {
+        font-size: 14px;
+        line-height:22px;
+    }
+
+    .update-metadata, .update-metadata-new {
+        font-size: 10px;
+    }
 }
 
 a:link {
